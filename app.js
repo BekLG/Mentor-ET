@@ -32,7 +32,8 @@ const articleSchema= new mongoose.Schema({
     fields: [String],
     content: String,
     author: String,
-    date: Date
+    date: Date,
+    approved: {type: Boolean, default: false }
 });
 
 const Article= new mongoose.model("article", articleSchema);
@@ -78,7 +79,7 @@ app.post("/composeArticle", function(req,res){
 })
 
 app.get("/articles",function(req,res){
-    Article.find({})
+    Article.find({approved:true}) // filter articles that are approved by admin from database
     .then((foundArticle)=>{
         res.send(foundArticle) //will be rendered
     })
