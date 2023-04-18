@@ -15,6 +15,17 @@ app.use(express.static("public"));
 
 mongoose.connect("mongodb://localhost:27017/mentorET", {useNewUrlParser: true})
 
+const mentorSchema= new mongoose.Schema({
+    firstName: String,
+    lastName: String,
+    educationLevel: String,     // degree,masters, undergraduate....
+    fieldOfExpertise: String,       //sewyew yatenaw field like computer science, finance, marketing, or any other area of specialization. 
+    profession: String, //sewyew currently eyesera yalebet position like accountant, fullstack developer...
+    email: String,
+    password: String
+});
+
+const Mentor= new mongoose.model("mentor", mentorSchema);
 
 const articleSchema= new mongoose.Schema({
     title: String,
@@ -31,6 +42,19 @@ const Article= new mongoose.model("article", articleSchema);
 
 app.get("/", function(req,res){
         res.send("home page")
+})
+
+app.get("/signInUp", function(req,res){
+    // this page will send a page that contains both a signin and signup pages with their forms
+    res.send("sign in and sign up page");
+
+    // from the sign in and up page there will be two possible post requests /login and /register
+})
+app.post("/login", function(req,res){
+    // handle login process here
+})
+app.post("/register", function(req,res){
+    // handle registration process here
 })
 
 app.get("/composeArticle", function(req,res){
@@ -56,12 +80,13 @@ app.post("/composeArticle", function(req,res){
 app.get("/articles",function(req,res){
     Article.find({})
     .then((foundArticle)=>{
-        res.send(foundArticle)
+        res.send(foundArticle) //will be rendered
     })
     .catch((err)=>{
         console.log(err);
     })
 })
+
 
 
 app.listen(3000, function(req,res){
