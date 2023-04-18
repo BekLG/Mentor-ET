@@ -53,6 +53,15 @@ app.post("/composeArticle", function(req,res){
     res.redirect("/");
 })
 
+app.get("/articles",function(req,res){
+    Article.find({})
+    .then((foundArticle)=>{
+        res.send(foundArticle)
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+})
 
 
 app.listen(3000, function(req,res){
