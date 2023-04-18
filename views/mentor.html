@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="mentor.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="carousel-container">
+    <div class=" carousel-indicator carousel-dark">
+      <button type="button" class="indicator-button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active">Login</button>
+      <button type="button" class="indicator-button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1">Sign in</button>
+
+    </div>
+    <br>
+    <div id="carouselExampleDark" class="carousel slide">
+
+      <div class="carousel-inner">
+        
+        <div class="carousel-item active" data-bs-interval="10000">
+
+          <div class="container">
+            <h1>log In</h1>
+            <form action="/" method="post">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" required>
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required>
+              <button type="submit"> <strong>log in</strong></button>
+
+            </form>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="container">
+            <h1>Sign In</h1>
+            <form action="/" method="post" id="sign-in-form">
+              <label for="username">Full Name</label>
+              <input type="text" id="username" name="username" required>
+              <label for="username">Phone number</label>
+              <input type="tel" id="phone-number" name="phone-number" required>
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required>
+              <label for="password">comfrim password</label>
+              <input type="password" id="comfrim-password" name="comfrim-password" required>
+              <button type="submit">Sign In</button>
+            </form>
+            
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
