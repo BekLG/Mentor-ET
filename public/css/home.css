@@ -1,20 +1,48 @@
 
 body{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .main-banner{
-  
-   background-image: linear-gradient(45deg,rgba(11, 0, 112, 0.678) 50%,rgba(255, 255, 255, 0.959)50%);
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position: center;
-   height: 75vh;
+
+ background-image: linear-gradient(45deg,rgba(11, 0, 112, 0.678) 50%,rgba(255, 255, 255, 0.959)50%);
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-position: center;
+ height: 75vh;
 }
 .description-container{
-   margin-top:10%;
-   background-color: rgba(17, 139, 245, 0);
+ margin-top:10%;
+ background-color: rgba(17, 139, 245, 0);
 }
 #article-cards{
-   background-color: rgb(1, 255, 255);
+ background-color: rgb(1, 255, 255);
+}
+/* style for FAQ section */
+.faq {
+ border: 1px solid #ccc;
+ margin-bottom: 20px;
+ padding: 10px;
+}
+.faq h3 {
+ margin-top: 0;
+ font-size: 20px;
+ font-weight: bold;
+ cursor: pointer;
+}
+.faq p {
+margin-top: 10px;
+ display: none;
+}
+.faq img{
+ width: 50px;
+ height: 30px;
+ margin:auto 1%;
+ opacity: 0.5;
+
+}
+/* style for footer */
+footer{
+ background-color: rgb(253, 255, 254);
+ color: black;
 }
