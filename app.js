@@ -33,6 +33,11 @@ app.get("/", function(req,res){
         res.send("home page")
 })
 
+app.get("/signInUp", function(req,res){
+    // this page will send a page that contains both a signin and signup pages with their forms
+    res.send("sign in and sign up page");
+})
+
 app.get("/composeArticle", function(req,res){
     // check if the user is mentor
     res.send("article composing page");
@@ -56,12 +61,13 @@ app.post("/composeArticle", function(req,res){
 app.get("/articles",function(req,res){
     Article.find({})
     .then((foundArticle)=>{
-        res.send(foundArticle)
+        res.send(foundArticle) //will be rendered
     })
     .catch((err)=>{
         console.log(err);
     })
 })
+
 
 
 app.listen(3000, function(req,res){
