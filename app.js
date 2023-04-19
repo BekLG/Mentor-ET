@@ -118,6 +118,24 @@ app.get("/completeProfile", function(req,res){
     res.send("to complete your profile, please fill out the following form")
 })
 
+app.post("/completeProfile", function(req,res){
+    const query = { _id: req.user._id };
+    Mentor.findOneAndUpdate(query, { 
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        educationLevel: req.body.educationLevel,     
+        fieldOfExpertise: req.body.fieldOfExpertise,    
+        profession: req.body.profession
+     })
+     .then(()=>{
+        console.log(req.user.username + " has completed your profile successfully");
+        res.redirect("/");
+     })
+     .catch((err)=>{
+        console.log(err);
+     })       
+})
+
 app.get("/composeArticle", function(req,res){
     // check if the user is mentor
     res.send("article composing page");
