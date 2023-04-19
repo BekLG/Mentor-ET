@@ -80,7 +80,23 @@ app.get("/signInUp", function(req,res){
 })
 app.post("/login", function(req,res){
     // handle login process here
-   
+    const mentor= new Mentor({
+        username: req.body.username,
+        password: req.body.password
+    });
+
+    req.login(mentor, function(err){
+        if(err)
+        {
+            console.log(err);
+        }
+        else{
+            passport.authenticate("local")(req, res, function(){
+                console.log("welcome "+ req.user.username );
+                res.redirect("/")
+            })
+        }
+    })
 })
 
 app.post("/register", function(req,res){
