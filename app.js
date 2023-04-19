@@ -4,6 +4,10 @@ const ejs= require("ejs");
 const bodyParser= require("body-parser");
 const mongoose= require("mongoose");
 const lodash= require("lodash");
+const session= require("express-session");
+const passport= require("passport");
+const passportLocalMongoose= require("passport-local-mongoose");
+const findOrCreate = require('mongoose-findorcreate');
 
 const app= express();
 
@@ -11,7 +15,14 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+app.use(session({
+    secret: "our little secret to be replaced by dotenv.",
+    resave: false,
+    saveUninitialized: false
+}));
 
+app.use(passport.initialize());
+app.use(passport.session());
 
 mongoose.connect("mongodb://localhost:27017/mentorET", {useNewUrlParser: true})
 
@@ -25,7 +36,24 @@ const mentorSchema= new mongoose.Schema({
     password: String
 });
 
+mentorSchema.plugin(passportLocalMongoose);
+mentorSchema.plugin(findOrCreate);
+
 const Mentor= new mongoose.model("mentor", mentorSchema);
+
+passport.use(Mentor.createStrategy());
+
+passport.serializeUser((Mentor, done) => {
+    done(null, Mentor.id);
+});
+passport.deserializeUser((mentorId, done) => {
+    Mentor.findById(mentorId)
+        .then((Mentor) => {
+            done(null, Mentor);
+        })
+        .catch(err => done(err))
+});
+
 
 const articleSchema= new mongoose.Schema({
     title: String,
@@ -37,7 +65,6 @@ const articleSchema= new mongoose.Schema({
 });
 
 const Article= new mongoose.model("article", articleSchema);
-
 
 
 
@@ -53,9 +80,60 @@ app.get("/signInUp", function(req,res){
 })
 app.post("/login", function(req,res){
     // handle login process here
+    const mentor= new Mentor({
+        username: req.body.username,
+        password: req.body.password
+    });
+
+    req.login(mentor, function(err){
+        if(err)
+        {
+            console.log(err);
+        }
+        else{
+            passport.authenticate("local")(req, res, function(){
+                console.log("welcome "+ req.user.username );
+                res.redirect("/")
+            })
+        }
+    })
 })
+
 app.post("/register", function(req,res){
     // handle registration process here
+   
+    Mentor.register({username : req.body.username}, req.body.password, function(err, user){
+        if(!err){
+            passport.authenticate("local")(req, res, function(){
+                res.redirect("/completeProfile")
+            })
+        } else{
+            console.log(err);
+        }
+    })
+})
+
+app.get("/completeProfile", function(req,res){
+    // a route to ask the mentor to fill relevant informations about him....after signing up.
+    res.send("to complete your profile, please fill out the following form")
+})
+
+app.post("/completeProfile", function(req,res){
+    const query = { _id: req.user._id };
+    Mentor.findOneAndUpdate(query, { 
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        educationLevel: req.body.educationLevel,     
+        fieldOfExpertise: req.body.fieldOfExpertise,    
+        profession: req.body.profession
+     })
+     .then(()=>{
+        console.log(req.user.username + " has completed your profile successfully");
+        res.redirect("/");
+     })
+     .catch((err)=>{
+        console.log(err);
+     })       
 })
 
 app.get("/composeArticle", function(req,res){
