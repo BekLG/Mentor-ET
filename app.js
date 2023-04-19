@@ -101,8 +101,7 @@ app.post("/login", function(req,res){
 
 app.post("/register", function(req,res){
     // handle registration process here
-    console.log(req.body.username);
-    console.log(req.body.password);
+   
     Mentor.register({username : req.body.username}, req.body.password, function(err, user){
         if(!err){
             passport.authenticate("local")(req, res, function(){
