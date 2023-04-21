@@ -93,6 +93,14 @@ app.post("/login", function(req,res){
         else{
             passport.authenticate("local")(req, res, function(){
                 console.log("welcome "+ req.user.username );
+
+                // check if the users profile is completed, if not completed redirect user to complete profile page.
+
+
+
+
+                ////////////////////////////////////////////////////////////////////////
+
                 res.redirect("/")
             })
         }
@@ -126,7 +134,9 @@ app.post("/completeProfile", function(req,res){
         educationLevel: req.body.educationLevel,     
         fieldOfExpertise: req.body.fieldOfExpertise,    
         profession: req.body.profession
-     })
+     }) const authorName= req.user.firstName + " " + req.user.lastName;
+    console.log(authorName);
+
      .then(()=>{
         console.log(req.user.username + " has completed your profile successfully");
         res.redirect("/");
@@ -139,9 +149,6 @@ app.post("/completeProfile", function(req,res){
 app.get("/composeArticle", function(req,res){
     // check if the user is mentor
     res.send("article composing page");
-     const authorName= req.user.firstName + " " + req.user.lastName;
-    console.log(authorName);
-
 })
 app.post("/composeArticle", function(req,res){
     const currentDate = new Date();
