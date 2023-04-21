@@ -1,0 +1,9 @@
+.article-btn {
+    border-radius: 50px;
+    border: none;
+    padding: 0 20px;
+    margin: 10px 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.212);
+    outline: none;
+    background-color: rgb(235, 230, 224);
+}

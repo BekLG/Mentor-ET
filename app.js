@@ -139,16 +139,19 @@ app.post("/completeProfile", function(req,res){
 app.get("/composeArticle", function(req,res){
     // check if the user is mentor
     res.send("article composing page");
+     const authorName= req.user.firstName + " " + req.user.lastName;
+    console.log(authorName);
 
 })
 app.post("/composeArticle", function(req,res){
     const currentDate = new Date();
+    const authorName= req.user.firstName + " " + req.user.lastName;     // getting looged user's full name
 
     const article= new Article({
         title: req.body.title,
         fields: req.body.fields,
         content: req.body.content,
-        author: req.body.author,     // for future author name will be fetched from the user data
+        author: authorName,     
         date: currentDate
     })
 
