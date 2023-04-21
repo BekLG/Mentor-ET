@@ -134,9 +134,7 @@ app.post("/completeProfile", function(req,res){
         educationLevel: req.body.educationLevel,     
         fieldOfExpertise: req.body.fieldOfExpertise,    
         profession: req.body.profession
-     }) const authorName= req.user.firstName + " " + req.user.lastName;
-    console.log(authorName);
-
+     })
      .then(()=>{
         console.log(req.user.username + " has completed your profile successfully");
         res.redirect("/");
