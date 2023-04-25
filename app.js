@@ -60,7 +60,7 @@ const articleSchema= new mongoose.Schema({
     fields: [String],
     content: String,
     author: String,
-    date: Date,
+    datePublished: Date,
     approved: {type: Boolean, default: false }
 });
 
@@ -157,7 +157,7 @@ app.post("/composeArticle", function(req,res){
         fields: req.body.fields,
         content: req.body.content,
         author: authorName,     
-        date: currentDate
+        datePublished: currentDate
     })
 
     article.save();
