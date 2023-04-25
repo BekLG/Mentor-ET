@@ -95,14 +95,23 @@ app.post("/login", function(req,res){
             passport.authenticate("local")(req, res, function(){
                 console.log("welcome "+ req.user.username );
 
-                // check if the users profile is completed, if not completed redirect user to complete profile page.
+                // check if the users profile is completed, if not completed redirect user to complete profile page. if completed redirect user to home page
 
-
-
-
-                ////////////////////////////////////////////////////////////////////////
-
-                res.redirect("/")
+                Mentor.findOne({ _id: req.user._id })
+                .then((foundMentor)=>{
+                    if(foundMentor.profileCompleted===false)
+                    {
+                        console.log("please complete your profile");
+                        res.redirect("/completeProfile");
+                    }
+                    else
+                    {
+                        res.redirect("/")
+                    }
+                })
+                .catch((err)=>{
+                    console.log(err);
+                })
             })
         }
     })
