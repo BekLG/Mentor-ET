@@ -33,7 +33,8 @@ const mentorSchema= new mongoose.Schema({
     fieldOfExpertise: String,       //sewyew yatenaw field like computer science, finance, marketing, or any other area of specialization. 
     profession: String, //sewyew currently eyesera yalebet position like accountant, fullstack developer...
     email: String,
-    password: String
+    password: String,
+    profileCompleted:{type: Boolean, default: false }
 });
 
 mentorSchema.plugin(passportLocalMongoose);
@@ -133,7 +134,8 @@ app.post("/completeProfile", function(req,res){
         lastName: req.body.lastName,
         educationLevel: req.body.educationLevel,     
         fieldOfExpertise: req.body.fieldOfExpertise,    
-        profession: req.body.profession
+        profession: req.body.profession,
+        profileCompleted: true
      })
      .then(()=>{
         console.log(req.user.username + " has completed your profile successfully");
@@ -173,6 +175,7 @@ app.get("/articles",function(req,res){
         console.log(err);
     })
 })
+
 
 
 
