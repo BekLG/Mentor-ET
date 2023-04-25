@@ -33,7 +33,8 @@ const mentorSchema= new mongoose.Schema({
     fieldOfExpertise: String,       //sewyew yatenaw field like computer science, finance, marketing, or any other area of specialization. 
     profession: String, //sewyew currently eyesera yalebet position like accountant, fullstack developer...
     email: String,
-    password: String
+    password: String,
+    profileCompleted:{type: Boolean, default: false }
 });
 
 mentorSchema.plugin(passportLocalMongoose);
@@ -60,7 +61,7 @@ const articleSchema= new mongoose.Schema({
     fields: [String],
     content: String,
     author: String,
-    date: Date,
+    datePublished: Date,
     approved: {type: Boolean, default: false }
 });
 
@@ -94,14 +95,23 @@ app.post("/login", function(req,res){
             passport.authenticate("local")(req, res, function(){
                 console.log("welcome "+ req.user.username );
 
-                // check if the users profile is completed, if not completed redirect user to complete profile page.
+                // check if the users profile is completed, if not completed redirect user to complete profile page. if completed redirect user to home page
 
-
-
-
-                ////////////////////////////////////////////////////////////////////////
-
-                res.redirect("/")
+                Mentor.findOne({ _id: req.user._id })
+                .then((foundMentor)=>{
+                    if(foundMentor.profileCompleted===false)
+                    {
+                        console.log("please complete your profile");
+                        res.redirect("/completeProfile");
+                    }
+                    else
+                    {
+                        res.redirect("/")
+                    }
+                })
+                .catch((err)=>{
+                    console.log(err);
+                })
             })
         }
     })
@@ -133,7 +143,8 @@ app.post("/completeProfile", function(req,res){
         lastName: req.body.lastName,
         educationLevel: req.body.educationLevel,     
         fieldOfExpertise: req.body.fieldOfExpertise,    
-        profession: req.body.profession
+        profession: req.body.profession,
+        profileCompleted: true
      })
      .then(()=>{
         console.log(req.user.username + " has completed your profile successfully");
@@ -157,7 +168,7 @@ app.post("/composeArticle", function(req,res){
         fields: req.body.fields,
         content: req.body.content,
         author: authorName,     
-        date: currentDate
+        datePublished: currentDate
     })
 
     article.save();
@@ -173,6 +184,7 @@ app.get("/articles",function(req,res){
         console.log(err);
     })
 })
+
 
 
 
