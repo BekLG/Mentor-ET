@@ -70,6 +70,7 @@ const Article= new mongoose.model("article", articleSchema);
 
 
 app.get("/", function(req,res){
+    // check if mentor is logged in and render necessary buttons here.
         res.send("home page")
 })
 
@@ -116,6 +117,17 @@ app.post("/login", function(req,res){
         }
     })
 })
+
+app.get("/logout", function(req,res){
+    req.logout(function(err){
+        if(err)
+        {
+            console.log(err);
+        }
+        res.redirect("/");
+    });
+    
+});
 
 app.post("/register", function(req,res){
     // handle registration process here
