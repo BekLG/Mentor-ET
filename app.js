@@ -117,6 +117,18 @@ app.post("/login", function(req,res){
     })
 })
 
+app.get("/logout", function(req,res){
+    req.logout(function(err){
+        if(err)
+        {
+            console.log(err);
+        }
+        console.log("user logged out successfully");
+        res.redirect("/");
+    });
+    
+});
+
 app.post("/register", function(req,res){
     // handle registration process here
    
