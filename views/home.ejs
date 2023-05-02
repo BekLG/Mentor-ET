@@ -51,7 +51,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/views/blog.html">Article</a>
+                            <a class="nav-link active" aria-current="page" href="/articles">Articles</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">About</a>
@@ -89,8 +89,8 @@
                 <div class="post-box">
 
                     <h2 class="post-title"><%= article.title%></h2>
-    
-                    <span class="post-date"><%= article.date%></span>
+                    <span class="post-date"><%= article.datePublished.substring(4,15)%></span> 
+                    
                     <p class="post-description" ><%= article.content.substring(0,300)+"..."%></p>
     
                     <button class="read-more-button"> <a href="post-page.html">
