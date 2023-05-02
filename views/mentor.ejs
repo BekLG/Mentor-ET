@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="/public/css/mentor.css">
+  <link rel="stylesheet" href="/css/mentor.css">
   <title>Mentor sign-in-form</title>
 </head>
 
@@ -27,7 +27,7 @@
 
           <div class="container">
             <h1>log In</h1>
-            <form action="/" method="post">
+            <form action="/login" method="post">
               <label for="username">Username</label>
               <input type="text" id="username" name="username" required>
               <label for="password">Password</label>
@@ -41,11 +41,9 @@
         <div class="carousel-item" data-bs-interval="2000">
           <div class="container">
             <h1>Sign In</h1>
-            <form action="/" method="post" id="sign-in-form">
-              <label for="username">Full Name</label>
+            <form action="/register" method="post" id="sign-in-form">
+              <label for="username">Username</label>
               <input type="text" id="username" name="username" required>
-              <label for="username">Phone number</label>
-              <input type="tel" id="phone-number" name="phone-number" required>
               <label for="password">Password</label>
               <input type="password" id="password" name="password" required>
               <label for="password">comfrim password</label>

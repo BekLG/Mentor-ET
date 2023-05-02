@@ -13,7 +13,7 @@ html{
   justify-content: center;
   align-items: center;
   margin-top: 0;
-  background-image: url(/public/images/circle-scatter-haikei\ blue.svg);
+  background-image: url(/images/circle-scatter-haikei\ blue.svg);
   background-attachment: fixed;
   background-color:  #ffffff;
   height: 100vh;
@@ -53,7 +53,7 @@ html{
 /* cards style */
 .card-container {
  padding-top: 3rem;
- background-image: url(/public/images/circle-scatter-haikei.svg);
+ background-image: url(/images/circle-scatter-haikei.svg);
  background-attachment: fixed;
  padding-bottom: 3rem;
 background-color: #fff; 
@@ -134,7 +134,7 @@ img {
 } */
 /*e for FAQ section */
 #FAQ{
-   background-image: url(/public/images/wave.svg);
+   background-image: url(/images/wave.svg);
    background-repeat: no-repeat;
    color: #fff;
 }
