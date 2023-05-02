@@ -71,7 +71,7 @@ const Article= new mongoose.model("article", articleSchema);
 
 app.get("/", function(req,res){
     // check if mentor is logged in and render necessary buttons here.
-        res.send("home page")
+        res.render("home")
 })
 
 app.get("/signInUp", function(req,res){
