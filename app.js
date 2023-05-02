@@ -207,7 +207,19 @@ app.get("/admin", function(red,res){
     })
 })
 
-
+app.post("/admin/approvePost", function(req,res){
+    const query = { _id: req.body.articleId };
+    Article.findOneAndUpdate(query, { 
+        approved:true
+     })
+     .then(()=>{
+        console.log("Article approved successfully");
+        res.redirect("/admin");
+     })
+     .catch((err)=>{
+        console.log(err);
+     })  
+})
 
 
 
