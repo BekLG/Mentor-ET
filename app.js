@@ -84,7 +84,7 @@ app.get("/", function(req,res){
 
 app.get("/signInUp", function(req,res){
     // this page will send a page that contains both a signin and signup pages with their forms
-    res.send("sign in and sign up page");
+    res.render("mentor")
 
     // from the sign in and up page there will be two possible post requests /login and /register
 })
@@ -198,7 +198,8 @@ app.post("/composeArticle", function(req,res){
 app.get("/articles",function(req,res){
     Article.find({approved:true}) // filter articles that are approved by admin from database
     .then((foundArticle)=>{
-        res.send(foundArticle) //will be rendered
+        
+        res.render("blog",{Articles: foundArticle});
     })
     .catch((err)=>{
         console.log(err);
