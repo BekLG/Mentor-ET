@@ -71,7 +71,15 @@ const Article= new mongoose.model("article", articleSchema);
 
 app.get("/", function(req,res){
     // check if mentor is logged in and render necessary buttons here.
-        res.send("home page")
+        
+
+        Article.find({approved:true}).limit(3) // select only 3 articles,       selecting criterea will be modified.
+    .then((foundArticle)=>{
+        res.render("home",{Articles: foundArticle})
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
 })
 
 app.get("/signInUp", function(req,res){
