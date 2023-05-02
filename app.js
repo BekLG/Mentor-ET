@@ -197,6 +197,7 @@ app.get("/articles",function(req,res){
     })
 })
 
+
 app.get("/admin", function(red,res){
     Article.find({approved:false}) // filter articles that are not approved yet
     .then((foundArticle)=>{
