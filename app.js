@@ -198,6 +198,31 @@ app.get("/articles",function(req,res){
 })
 
 
+app.get("/admin", function(red,res){
+    Article.find({approved:false}) // filter articles that are not approved yet
+    .then((foundArticle)=>{
+        res.send(foundArticle) //will be rendered
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+})
+
+app.post("/admin/approvePost", function(req,res){
+    const query = { _id: req.body.articleId };
+    Article.findOneAndUpdate(query, { 
+        approved:true
+     })
+     .then(()=>{
+        console.log("Article approved successfully");
+        res.redirect("/admin");
+     })
+     .catch((err)=>{
+        console.log(err);
+     })  
+})
+
+
 
 
 app.listen(3000, function(req,res){
