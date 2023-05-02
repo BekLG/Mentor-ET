@@ -80,60 +80,29 @@
     </section>
 
     <section class="card-container">
+
+        <h2 class="hero-enhance" >Most viewed Articles</h2>
         <div class="post post-container ">
-            <div class="post-box">
 
-                <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+            <%Articles.forEach(function(article){ %>
 
-                <span class="post-date">21 feb 2019</span>
-                <p class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, commodi
-                    corrupti optio possimus odit reiciendis rem distinctio tempora blanditiis reprehenderit id quae aut?
-                    Repudiandae adipisci aliquam, non unde tempora velit.</p>
+                <div class="post-box">
 
-                <button class="read-more-button"> <a href="post-page.html">
-                        Read More
-                    </a></button>
-                <div class=" profile">
-                    <i class="fa-solid fa-circle-user px-2 fa-2xl"></i>
-                    <span class="profile-name">Gash Mesfn</span>
-                </div>
-            </div>
-            <div class="post-box">
-
-                <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
-                <span class="post-date">21 feb 2019</span>
-                <p class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, commodi
-                    corrupti
-                    optio possimus odit reiciendis rem distinctio tempora blanditiis reprehenderit id quae aut?
-                    Repudiandae
-                    adipisci aliquam, non unde tempora velit.</p>
-                <button class="read-more-button"> <a href="post-page.html">
-                        Read More
-                    </a></button>
-                <div class=" profile">
-                    <i class="fa-solid fa-circle-user px-2 fa-2xl"></i>
-                    <span class="profile-name">Addisu Andese</span>
-                </div>
-            </div>
-            <div class="post-box">
-                <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
-
-                <span class="post-date">21 feb 2019</span>
-                <p class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, commodi
-                    corrupti
-                    optio possimus odit reiciendis rem distinctio tempora blanditiis reprehenderit id quae aut?
-                    Repudiandae
-                    adipisci aliquam, non unde tempora velit.</p>
-
-                <button class="read-more-button"> <a href="post-page.html">
-                    Read More
-                </a></button>
-                <div class=" profile">
+                    <h2 class="post-title"><%= article.title%></h2>
+    
+                    <span class="post-date"><%= article.date%></span>
+                    <p class="post-description" ><%= article.content.substring(0,300)+"..."%></p>
+    
+                    <button class="read-more-button"> <a href="post-page.html">
+                            Read More
+                        </a></button>
+                    <div class=" profile">
                         <i class="fa-solid fa-circle-user px-2 fa-2xl"></i>
-                        <span class="profile-name">Tibebu Tulucha</span>
-            </div>
-        </div>
+                        <span class="profile-name"><%= article.author%></span>
+                    </div>
+                </div>
 
+            <% }) %>
     </section>
 
 
