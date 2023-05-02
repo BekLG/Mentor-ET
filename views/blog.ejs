@@ -102,7 +102,7 @@
 
           <article class="blog-post">
             <h2 class="blog-post-title mb-1"><%= article.title%></h2>
-            <p class="blog-post-meta"><%= article.date%> by <a href="#"><%= article.author%></a></p>
+            <p class="blog-post-meta"><%= article.datePublished.substring(4,15)%> by <a href="#"><%= article.author%></a></p>
   
             <p><%= article.content.substring(0,400)+"..."%></p>
             
