@@ -13,142 +13,154 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MentorET</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Field
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">Acounting</a></li>
+                                <li><a class="dropdown-item" href="#">Computer Science</a></li>
+                                <li><a class="dropdown-item" href="#">Markating Managment</a></li>
+                                <li><a class="dropdown-item" href="#">Managment</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/views/blog.html">Article</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">About</a>
+                        </li>
+                        <li>
+                            <button class="btn btn-outline-success " type="submit"><a class="nav-link"
+                                    href="/views/mentor.html">Be a
+                                    Mentor</a></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
     <section class="main-banner">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">MentorET</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                    aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Field
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#">Acounting</a></li>
-                                    <li><a class="dropdown-item" href="#">Computer Science</a></li>
-                                    <li><a class="dropdown-item" href="#">Markating Managment</a></li>
-                                    <li><a class="dropdown-item" href="#">Managment</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/views/blog.html">Article</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">About</a>
-                            </li>
-                            <li>
-                                <button class="btn btn-outline-success " type="submit"><a class="nav-link" href="/views/mentor.html">Be a
-                                        Mentor</a></button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-        </nav>
-
-        <div class="description-container container">
-            <div class="row ">
-                <div class="col-12">
-                    <h1>MentorET</h1>
-                    <h2>something that descripe shortly</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
-                    <button class="btn btn-outline-success">something</button>
-                </div>
-                <!-- <div class="col-lg-8 col-sm-12">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime consequuntur excepturi est
-                        corporis, recusandae inventore quis itaque totam blanditiis, adipisci doloribus consequatur
-                        necessitatibus. Quae veniam ratione nihil aliquid atque!</p>
-                </div> -->
-
+        <div class="banner-description row ">
+            <div class="hero-container col-lg-6 col-sm-12">
+                <h6 class="hero-join">Join Our Community Today</h6>
+                <p class="hero-enhance">Enhance your </p>
+                <p class="hero-uni ">University Journey</p>
             </div>
+            <div class="col-lg-6 col-sm-12">
+                <img src="../public/images/mentorpic.webp" alt="">
+            </div>
+
         </div>
     </section>
-    <section id="article-cards" class=" container">
-        <div class="row justify-content-center">
-            <div class="col-lg-4 p-3 col-md-6 col-sm-12">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
+
+    <section class="card-container">
+        <div class="post post-container ">
+            <div class="post-box">
+
+                <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+
+                <span class="post-date">21 feb 2019</span>
+                <p class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, commodi
+                    corrupti optio possimus odit reiciendis rem distinctio tempora blanditiis reprehenderit id quae aut?
+                    Repudiandae adipisci aliquam, non unde tempora velit.</p>
+
+                <button class="read-more-button"> <a href="post-page.html">
+                        Read More
+                    </a></button>
+                <div class=" profile">
+                    <i class="fa-solid fa-circle-user px-2 fa-2xl"></i>
+                    <span class="profile-name">Gash Mesfn</span>
                 </div>
             </div>
-            <div class="col-lg-4 p-3 justify-content-center col-md-6 col-sm-12">
-                <div class="card " style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
+            <div class="post-box">
+
+                <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+                <span class="post-date">21 feb 2019</span>
+                <p class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, commodi
+                    corrupti
+                    optio possimus odit reiciendis rem distinctio tempora blanditiis reprehenderit id quae aut?
+                    Repudiandae
+                    adipisci aliquam, non unde tempora velit.</p>
+                <button class="read-more-button"> <a href="post-page.html">
+                        Read More
+                    </a></button>
+                <div class=" profile">
+                    <i class="fa-solid fa-circle-user px-2 fa-2xl"></i>
+                    <span class="profile-name">Addisu Andese</span>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-12 p-3 col-md-6 p2 mx-auto  ">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
+            <div class="post-box">
+                <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+
+                <span class="post-date">21 feb 2019</span>
+                <p class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, commodi
+                    corrupti
+                    optio possimus odit reiciendis rem distinctio tempora blanditiis reprehenderit id quae aut?
+                    Repudiandae
+                    adipisci aliquam, non unde tempora velit.</p>
+
+                <button class="read-more-button"> <a href="post-page.html"">
+                    Read More
+                </a></button>
+                <div class=" profile">
+                        <i class="fa-solid fa-circle-user px-2 fa-2xl"></i>
+                        <span class="profile-name">Tibebu Tulucha</span>
             </div>
         </div>
+
     </section>
+
+
     <section id="Something">
-        <h1>something</h1>
+        <!-- <h1>something</h1> -->
     </section>
-    <section id="FAQ" class="">
+    <section id="FAQ">
         <div class="container">
+            <h1>FAQ'S</h1>
             <div class="faq row">
                 <h3 class="col-11">What is your return policy?</h3>
-                <img class="col-1" src="plus.png" alt="">
+                <img class="col-1" src="/public/images/arrow.svg" alt="">
                 <p>We accept returns within 30 days of delivery if the item is unused and in its original packaging.</p>
             </div>
             <div class="faq row">
                 <h3 class="col-11">What is your return policy?</h3>
-                <img class="col-1" src="plus.png" alt="">
+                <img class="col-1" src="/public/images/arrow.svg" alt="">
                 <p>We accept returns within 30 days of delivery if the item is unused and in its original packaging.</p>
             </div>
             <div class="faq row">
                 <h3 class="col-11">What is your return policy?</h3>
-                <img class="col-1" src="plus.png" alt="">
+                <img class="col-1" src="/public/images/arrow.svg" alt="">
                 <p>We accept returns within 30 days of delivery if the item is unused and in its original packaging.</p>
             </div>
             <div class="faq row">
                 <h3 class="col-11">What is your return policy?</h3>
-                <img class="col-1" src="plus.png" alt="">
+                <img class="col-1" src="/public/images/arrow.svg" alt="">
                 <p>We accept returns within 30 days of delivery if the item is unused and in its original packaging.</p>
             </div>
         </div>
@@ -157,59 +169,62 @@
 
     </section>
     <footer class="footer container-fluid">
-    
-<div class="container">
-    <footer class="py-5">
-      <div class="row">
-        <div class="col-3 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-          </ul>
+
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col-3 col-md-2 mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="col-6 justify-content-center">
+                        <h5>contact us</h5>
+                        <ul class="list-unstyled d-flex py-3">
+                            <i class="fa-brands fa-linkedin px-2 fa-2xl" style="color: #0e5add;"></i>
+                            <i class="fa-brands fa-telegram px-2 fa-2xl" style="color: #0e5add;"></i>
+                            <i class="fa-brands fa-facebook px-2 fa-2xl" style="color: #0e5add;"></i>
+                            <i class="fa-solid fa-envelope px-2 fa-2xl" style="color: #0e5add;"></i>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 offset-md-1 mb-3">
+                        <form>
+                            <h5>Subscribe to our newsletter</h5>
+                            <p>Monthly digest of what's new and exciting from us.</p>
+                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                <label for="newsletter1" class="visually-hidden">Email address</label>
+                                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                                <button class="btn btn-primary" type="button">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-between my-4 border-top">
+                    <p>&copy; 2023 Company, Inc. All rights reserved.</p>
+                </div>
+            </footer>
         </div>
-  
-        
-  
-        <div class="col-6 justify-content-center">
-          <h5>contact us</h5>
-          <ul class="list-unstyled d-flex py-3">
-            <i class="fa-brands fa-linkedin px-2 fa-2xl" style="color: #0e5add;"></i>
-            <i class="fa-brands fa-telegram px-2 fa-2xl" style="color: #0e5add;"></i>
-            <i class="fa-brands fa-facebook px-2 fa-2xl" style="color: #0e5add;"></i>
-            <i class="fa-solid fa-envelope px-2 fa-2xl" style="color: #0e5add;"></i>
-            
-            </ul>
-        </div>
-  
-        <div class="col-md-3 offset-md-1 mb-3">
-          <form>
-            <h5>Subscribe to our newsletter</h5>
-            <p>Monthly digest of what's new and exciting from us.</p>
-            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-              <label for="newsletter1" class="visually-hidden">Email address</label>
-              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-              <button class="btn btn-primary" type="button">Subscribe</button>
-            </div>
-          </form>
-        </div>
-      </div>
-  
-      <div class="d-flex flex-column flex-sm-row justify-content-between my-4 border-top">
-        <p>&copy; 2023 Company, Inc. All rights reserved.</p>
-      </div>
-    </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
-    </script>
-    <!-- <script src="/dist/js/bootstrap.min.js"></script> -->
-    <script src="frontApp.js"></script>
-    <script src="https://kit.fontawesome.com/e6213c5304.js" crossorigin="anonymous"></script>
-    <!-- font awesome -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+        </script>
+        <!-- <script src="/dist/js/bootstrap.min.js"></script> -->
+        <script src="/public/js/home.js"></script>
+        <script src="https://kit.fontawesome.com/e6213c5304.js" crossorigin="anonymous"></script>
+        <!-- font awesome -->
 </body>
 
 </html>
