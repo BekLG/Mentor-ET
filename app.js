@@ -197,6 +197,17 @@ app.get("/articles",function(req,res){
     })
 })
 
+app.get("/articles/:field", function(req,res){
+    const field= req.params.field;
+   
+    Article.find({fields: field}) // filter articles with selected fields
+    .then((foundArticle)=>{
+        res.send(foundArticle) //will be rendered
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+})
 
 app.get("/admin", function(red,res){
     Article.find({approved:false}) // filter articles that are not approved yet
