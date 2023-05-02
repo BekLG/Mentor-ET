@@ -198,7 +198,8 @@ app.post("/composeArticle", function(req,res){
 app.get("/articles",function(req,res){
     Article.find({approved:true}) // filter articles that are approved by admin from database
     .then((foundArticle)=>{
-        res.send(foundArticle) //will be rendered
+        
+        res.render("blog",{Articles: foundArticle});
     })
     .catch((err)=>{
         console.log(err);
