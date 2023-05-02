@@ -61,7 +61,7 @@ const articleSchema= new mongoose.Schema({
     fields: [String],
     content: String,
     author: String,
-    datePublished: Date,
+    datePublished: String,
     approved: {type: Boolean, default: false }
 });
 
