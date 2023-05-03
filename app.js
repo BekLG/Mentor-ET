@@ -210,7 +210,15 @@ app.get("/articles",function(req,res){
     Article.find({approved:true}) // filter articles that are approved by admin from database
     .then((foundArticle)=>{
         
-        res.render("blog",{Articles: foundArticle});
+        Field.find({})  //fetch all fields
+        .then((foundField)=>{
+            res.render("blog",{Articles: foundArticle, Fields: foundField});
+            console.log(foundArticle);
+            console.log(foundField);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })  
     })
     .catch((err)=>{
         console.log(err);
