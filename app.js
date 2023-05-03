@@ -80,20 +80,13 @@ app.get("/", function(req,res){
 
         Article.find({approved:true}).limit(3) // select only 3 articles,       selecting criterea will be modified.
     .then((foundArticle)=>{
-
-
-
         Field.find({})  //fetch all fields
         .then((foundField)=>{
             res.render("home",{Articles: foundArticle, Fields: foundField})
         })
         .catch((err)=>{
             console.log(err);
-        })
-
-
-
-        
+        })  
     })
     .catch((err)=>{
         console.log(err);
