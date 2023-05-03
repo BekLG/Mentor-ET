@@ -40,10 +40,9 @@
                                 Field
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">Acounting</a></li>
-                                <li><a class="dropdown-item" href="#">Computer Science</a></li>
-                                <li><a class="dropdown-item" href="#">Markating Managment</a></li>
-                                <li><a class="dropdown-item" href="#">Managment</a></li>
+                                <% for(let i=0; i<fields.length; i++) {%>
+                                <li><a class="dropdown-item" href="#"><%= fields[i] %></a></li>
+                                <% } %>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
