@@ -188,7 +188,7 @@ app.post("/completeProfile", function(req,res){
 
 app.get("/composeArticle", function(req,res){
     // check if the user is mentor
-    res.send("article composing page");
+    res.render("composeArticle");
 })
 app.post("/composeArticle", function(req,res){
     const currentDate = new Date();
