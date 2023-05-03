@@ -151,7 +151,7 @@
 
               <button class=" article-btn ">All</button>
               <% Fields.forEach(field => { %>
-                <button class=" article-btn "> <%= field.name %> </button>
+                <a href="/articles/<%= field.name %>"><button class=" article-btn "> <%= field.name %> </button></a>
               <% }) %>
             </div>
           </div>
