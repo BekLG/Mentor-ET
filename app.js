@@ -67,7 +67,12 @@ const articleSchema= new mongoose.Schema({
 
 const Article= new mongoose.model("article", articleSchema);
 
+const fieldSchema= new mongoose.Schema({
+    name: String,
+    category: [String] 
+});
 
+const Field= new mongoose.model("field", fieldSchema);
 
 app.get("/", function(req,res){
     // check if mentor is logged in and render necessary buttons here.
@@ -242,6 +247,17 @@ app.post("/admin/approvePost", function(req,res){
      })  
 })
 
+app.get("/admin/fields", function(req,res){
+    res.send("a page that contains form to add a new field.")
+})
+app.post("/admin/addField", function(req,res){
+    const field= new Field({
+        name: req.body.name,
+        category: req.body.category
+    })
+    field.save();
+    res.redirect("/admin/fields");
+})
 
 
 
