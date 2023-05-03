@@ -40,13 +40,9 @@
                                 Field
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <% for(let i=0; i<fields.length; i++) {%>
-                                <li><a class="dropdown-item" href="#"><%= fields[i] %></a></li>
-                                <% } %>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <% Fields.forEach((field)=>{%>
+                                <li><a class="dropdown-item" href="/articles/<%= field.name%>"><%= field.name%></a></li>
+                                <% }) %>
                             </ul>
                         </li>
                         <li class="nav-item">
