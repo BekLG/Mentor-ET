@@ -1,4 +1,5 @@
 var faqs = document.querySelectorAll('.faq img');
+let isRotated = false;
 
 for (var i = 0; i < faqs.length; i++) {
     faqs[i].addEventListener('click', function() {
