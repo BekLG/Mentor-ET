@@ -222,7 +222,7 @@ app.get("/articles/:field", function(req,res){
    
     Article.find({fields: field}) // filter articles with selected fields
     .then((foundArticle)=>{
-        res.send(foundArticle) //will be rendered
+        res.render("blog",{Articles: foundArticle});
     })
     .catch((err)=>{
         console.log(err);
