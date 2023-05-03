@@ -134,42 +134,7 @@
 
 
           <%})%>
-        
-<!-- 
-        <hr>
-        <article class="blog-post">
-          <h2 class="blog-post-title mb-1">Computer Scince</h2>
-          <p class="blog-post-meta">December 14, 2020 by <a href="#">Addisu Anbese</a></p>
 
-          <p> Database is Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aspernatur ipsum, voluptatibus beatae
-            explicabo tempore! Error, assumenda? Tempore vitae error,
-            quidem illum repellendus iste eveniet possimus aliquam nobis voluptas optio?</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos fuga est cumque necessitatibus perferendis
-            illum consequatur quia, quae illo quo nostrum reiciendis voluptatem dicta et debitis perspiciatis sequi
-            excepturi obcaecati.</p>
-          <br>
-          <br>
-          <a class="btn btn-outline-primary rounded-pill" href="#">Read More</a>
-          <br>
-          <br>
-          <div class="mentor-info container">
-            <div class="row justify-content-between">
-              <div class="mentor-contact col-6">
-                <i class="fa-brands fa-linkedin px-2 fa-lg" style="color: #0e5add;"></i>
-                <i class="fa-brands fa-telegram px-2 fa-lg" style="color: #0e5add;"></i>
-                <i class="fa-brands fa-facebook px-2 fa-lg" style="color: #0e5add;"></i>
-                <i class="fa-solid fa-envelope px-2 fa-lg" style="color: #0e5add;"></i>
-
-              </div>
-              <div class="justify-content-around d-flex col-3">
-                <i class="fa fa-thumbs-o-up" aria-hidden="true" style="color:#0e5add"></i>
-                <i class="fa fa-share-alt" aria-hidden="true" style="color:#0e5add"></i>
-                <i class="fa fa-eye" aria-hidden="true" style="color:#0e5add"></i>
-              </div>
-            </div>
-
-          </div>
-        </article> -->
         <hr>
         <nav class="blog-pagination" aria-label="Pagination">
           <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
@@ -183,12 +148,11 @@
           <div class="p-4 mb-3 bg-body-tertiary rounded">
             <h4 class="fst-italic">About</h4>
             <div class=" btn-container">
-              <button class=" article-btn ">Blue</button>
-              <button class=" article-btn ">Green</button>
-              <button class=" article-btn ">Red</button>
-              <button class=" article-btn ">Yellow</button>
-              <button class=" article-btn ">Purple</button>
-              <button class=" article-btn ">Orange</button>
+
+              <button class=" article-btn ">All</button>
+              <% Fields.forEach(field => { %>
+                <button class=" article-btn "> <%= field => </button>
+              <% }) %>
             </div>
           </div>
 
