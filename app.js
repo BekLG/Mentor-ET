@@ -213,8 +213,6 @@ app.get("/articles",function(req,res){
         Field.find({})  //fetch all fields
         .then((foundField)=>{
             res.render("blog",{Articles: foundArticle, Fields: foundField});
-            console.log(foundArticle);
-            console.log(foundField);
         })
         .catch((err)=>{
             console.log(err);
@@ -230,11 +228,29 @@ app.get("/articles/:field", function(req,res){
    
     Article.find({fields: field}) // filter articles with selected fields
     .then((foundArticle)=>{
-        res.render("blog",{Articles: foundArticle});
+
+        Field.find({})  //fetch all fields
+        .then((foundField)=>{
+            res.render("blog",{Articles: foundArticle, Fields: foundField});
+        })
+        .catch((err)=>{
+            console.log(err);
+        })  
     })
     .catch((err)=>{
         console.log(err);
     })
+})
+app.get("/articles/read/:articleId", function(req,res){     //a route for read more, to display the whole article in ine page.
+    const articleId= req.params.articleId;
+    Article.find({_id: articleId})
+    .then((foundArticle)=>{
+        res.send(foundArticle);     //to be renderd on new page
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+
 })
 
 app.get("/admin", function(red,res){
