@@ -213,8 +213,6 @@ app.get("/articles",function(req,res){
         Field.find({})  //fetch all fields
         .then((foundField)=>{
             res.render("blog",{Articles: foundArticle, Fields: foundField});
-            console.log(foundArticle);
-            console.log(foundField);
         })
         .catch((err)=>{
             console.log(err);
@@ -230,7 +228,14 @@ app.get("/articles/:field", function(req,res){
    
     Article.find({fields: field}) // filter articles with selected fields
     .then((foundArticle)=>{
-        res.render("blog",{Articles: foundArticle});
+
+        Field.find({})  //fetch all fields
+        .then((foundField)=>{
+            res.render("blog",{Articles: foundArticle, Fields: foundField});
+        })
+        .catch((err)=>{
+            console.log(err);
+        })  
     })
     .catch((err)=>{
         console.log(err);

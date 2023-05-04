@@ -149,7 +149,7 @@
             <h4 class="fst-italic">About</h4>
             <div class=" btn-container">
 
-              <button class=" article-btn ">All</button>
+             <a href="/articles"><button class=" article-btn ">All</button></a> 
               <% Fields.forEach(field => { %>
                 <a href="/articles/<%= field.name %>"><button class=" article-btn "> <%= field.name %> </button></a>
               <% }) %>
