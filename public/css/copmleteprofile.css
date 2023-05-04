@@ -1,0 +1,23 @@
+h4.mb-3 {
+    text-align: center;
+    margin: 20px;
+  }
+  form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem auto;
+    height: 70vh;
+}
+form button {
+    background-color: #4caf50;
+    color: #fff;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 1rem 40%;
+  }
