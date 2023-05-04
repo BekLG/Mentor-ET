@@ -241,6 +241,17 @@ app.get("/articles/:field", function(req,res){
         console.log(err);
     })
 })
+app.get("/articles/read/:articleId", function(req,res){     //a route for read more, to display the whole article in ine page.
+    const articleId= req.params.articleId;
+    Article.find({_id: articleId})
+    .then((foundArticle)=>{
+        res.send(foundArticle);     //to be renderd on new page
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+
+})
 
 app.get("/admin", function(red,res){
     Article.find({approved:false}) // filter articles that are not approved yet
