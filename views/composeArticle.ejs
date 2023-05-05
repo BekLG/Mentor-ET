@@ -15,19 +15,24 @@
 <body>
     <h1 class="compose-article">Compose your article </h1>
     <div class="article-container">
-        <form action="" method="post" class="row">
+        <form action="/composeArticle" method="post" class="row">
             <div class="method-selection col-lg-3 col-md-12">
                 <h3>Title</h3>
                 <input type="text" name="title" id="title" placeholder="e.g web development">
                 <br>
                 <div class="chackbox-container">
                     <h3>Fields</h3>
-                    <label for="accounting">Accounting</label>
-                    <input type="checkbox" name="" id="accounting">
-                    <label for="computer-science">Computer Science</label>
-                    <input type="checkbox" name="" id="computer-science">
-                    <label for="mathematics">Mathematics</label>
-                    <input type="checkbox" name="" id="mathematics">
+
+                    <% Fields.forEach(field => { %>
+
+                        <ul>
+                            <li>
+                                <label for="<%=field.name%>"><%=field.name%></label>
+                                <input type="checkbox" name="fields" value="<%=field.name%>" id="<%=field.name%>">
+                            </li>
+                        </ul>
+                    <% }) %>
+
                     <button type="submit">Compose</button>
                 </div>
             </div>
