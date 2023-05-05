@@ -75,9 +75,7 @@ const fieldSchema= new mongoose.Schema({
 const Field= new mongoose.model("field", fieldSchema);
 
 app.get("/", function(req,res){
-    // check if mentor is logged in and render necessary buttons here.
-        
-
+    
         Article.find({approved:true}).limit(3) // select only 3 articles,       selecting criterea will be modified.
     .then((foundArticle)=>{
         Field.find({})  //fetch all fields
