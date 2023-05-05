@@ -22,12 +22,24 @@
                 <br>
                 <div class="chackbox-container">
                     <h3>Fields</h3>
-                    <label for="accounting">Accounting</label>
-                    <input type="checkbox" name="" id="accounting">
-                    <label for="computer-science">Computer Science</label>
-                    <input type="checkbox" name="" id="computer-science">
-                    <label for="mathematics">Mathematics</label>
-                    <input type="checkbox" name="" id="mathematics">
+
+
+
+                    <% Fields.forEach(field => { %>
+
+                        <ul>
+                            <li>
+                                <label for="<%=field.name%>"><%=field.name%></label>
+                                <input type="checkbox" name="fields" id="<%=field.name%>">
+                            </li>
+                        </ul>
+                    <% }) %>
+
+
+
+
+                    
+
                     <button type="submit">Compose</button>
                 </div>
             </div>
