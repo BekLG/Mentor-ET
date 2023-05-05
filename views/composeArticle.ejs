@@ -15,7 +15,7 @@
 <body>
     <h1 class="compose-article">Compose your article </h1>
     <div class="article-container">
-        <form action="" method="post" class="row">
+        <form action="/composeArticle" method="post" class="row">
             <div class="method-selection col-lg-3 col-md-12">
                 <h3>Title</h3>
                 <input type="text" name="title" id="title" placeholder="e.g web development">
@@ -23,22 +23,15 @@
                 <div class="chackbox-container">
                     <h3>Fields</h3>
 
-
-
                     <% Fields.forEach(field => { %>
 
                         <ul>
                             <li>
                                 <label for="<%=field.name%>"><%=field.name%></label>
-                                <input type="checkbox" name="fields" id="<%=field.name%>">
+                                <input type="checkbox" name="fields" value="<%=field.name%>" id="<%=field.name%>">
                             </li>
                         </ul>
                     <% }) %>
-
-
-
-
-                    
 
                     <button type="submit">Compose</button>
                 </div>

@@ -210,6 +210,7 @@ app.post("/composeArticle", function(req,res){
     })
 
     article.save();
+
     res.redirect("/");
 })
 
