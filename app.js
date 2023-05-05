@@ -82,7 +82,7 @@ app.get("/", function(req,res){
     .then((foundArticle)=>{
         Field.find({})  //fetch all fields
         .then((foundField)=>{
-            res.render("home",{Articles: foundArticle, Fields: foundField})
+            res.render("home",{Articles: foundArticle, Fields: foundField, isLoggedIn: req.session.isLoggedIn});
         })
         .catch((err)=>{
             console.log(err);
@@ -114,6 +114,8 @@ app.post("/login", function(req,res){
         else{
             passport.authenticate("local")(req, res, function(){
                 console.log("welcome "+ req.user.username );
+                req.session.isLoggedIn = true;
+
 
                 // check if the users profile is completed, if not completed redirect user to complete profile page. if completed redirect user to home page
 
