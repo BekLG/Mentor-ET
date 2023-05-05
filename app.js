@@ -234,7 +234,7 @@ app.get("/articles",function(req,res){
 app.get("/articles/:field", function(req,res){
     const field= req.params.field;
    
-    Article.find({fields: field}) // filter articles with selected fields
+    Article.find({fields: field, approved:true}) // filter articles with selected fields
     .then((foundArticle)=>{
 
         Field.find({})  //fetch all fields
