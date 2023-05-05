@@ -164,7 +164,7 @@ app.post("/register", function(req,res){
 
 app.get("/completeProfile", function(req,res){
     // a route to ask the mentor to fill relevant informations about him....after signing up.
-    res.send("to complete your profile, please fill out the following form")
+    res.render("completeprofile");
 })
 
 app.post("/completeProfile", function(req,res){
