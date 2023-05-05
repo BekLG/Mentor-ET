@@ -1,0 +1,65 @@
+
+body{
+  background-image: url(/images/blob-scatter-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+h1{
+  display: flex;
+  justify-content: center;
+  color: #25218D;
+  font-weight: 600;
+  text-align: end;
+}
+.article-container {
+  
+  background: #25218d73;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 7.5px );
+  -webkit-backdrop-filter: blur( 7.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 20px;
+  width: 100%;
+  margin: auto auto;
+}
+textarea {
+ width: 100%;
+ border-radius: 5px;
+  border: #25218D 1px solid;
+} 
+label {
+  margin: 10px;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+input[type="checkbox"] {
+  margin: 10px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  position: relative;
+  top: 2px;
+}
+input[type="text"]{
+  border-radius: 10px;
+  border: #25218D 1px solid;
+}
+button[type="submit"] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 10px;
+  left:10%
+}

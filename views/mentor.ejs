@@ -14,7 +14,7 @@
 <body>
   <div class="carousel-container">
     <div class=" carousel-indicator carousel-dark">
-      <button type="button" class="indicator-button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active">Login</button>
+      <button type="button " class="indicator-button active-btn" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active">Login</button>
       <button type="button" class="indicator-button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1">Sign in</button>
 
     </div>
@@ -28,10 +28,10 @@
           <div class="container">
             <h1>log In</h1>
             <form action="/login" method="post">
-              <label for="username">Username</label>
-              <input type="text" id="username" name="username" required>
-              <label for="password">Password</label>
-              <input type="password" id="password" name="password" required>
+              <label for="username" class="form-label">Username</label>
+              <input type="text" id="username" class="form-control" name="username" required>
+              <label for="password" class="form-label" >Password</label>
+              <input type="password" id="password" class="form-control" name="password" required>
               <button type="submit"> <strong>log in</strong></button>
 
             </form>
@@ -42,20 +42,17 @@
           <div class="container">
             <h1>Sign In</h1>
             <form action="/register" method="post" id="sign-in-form">
-              <label for="username">Username</label>
-              <input type="text" id="username" name="username" required>
-              <label for="password">Password</label>
-              <input type="password" id="password" name="password" required>
-              <label for="password">comfrim password</label>
-              <input type="password" id="comfrim-password" name="comfrim-password" required>
+              <label for="username" class="form-label">Username</label>
+              <input type="text" id="username" class="form-control" name="username" required>
+              <label for="password" class="form-label">Password</label>
+              <input type="password" id="password" class="form-control" name="password" required>
+              <label for="password" class="form-label">comfrim password</label>
+              <input type="password" id="comfrim-password" class="form-control" name="comfrim-password" required>
               <button type="submit">Sign In</button>
             </form>
-            
           </div>
         </div>
-
-
-      </div>
+ </div>
     </div>
 
   </div>
@@ -63,6 +60,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
   </script>
+  <script src="/js/mentor.js"></script>
 </body>
 
 </html>

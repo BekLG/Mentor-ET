@@ -21,6 +21,9 @@ body {
   backdrop-filter: blur(6.8px);
   -webkit-backdrop-filter: blur(6.8px);
 }
+.active-btn{
+  background-image: linear-gradient(300deg,#FB7267 ,#812b24);
+}
 .container {
   width: 100%;
   /* margin: 50px auto; */
@@ -41,15 +44,6 @@ label {
   margin-bottom: 10px;
   color: #333;
 }
-input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px yellow solid;
-  margin-bottom: 20px;
-  font-size: 16px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
 form button {
   background-color: #4caf50;
   color: #fff;
@@ -59,6 +53,7 @@ form button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  margin: 2rem 50%;
   transition: background-color 0.3s ease;
 }
 button:hover {
