@@ -75,14 +75,12 @@ const fieldSchema= new mongoose.Schema({
 const Field= new mongoose.model("field", fieldSchema);
 
 app.get("/", function(req,res){
-    // check if mentor is logged in and render necessary buttons here.
-        
-
+    
         Article.find({approved:true}).limit(3) // select only 3 articles,       selecting criterea will be modified.
     .then((foundArticle)=>{
         Field.find({})  //fetch all fields
         .then((foundField)=>{
-            res.render("home",{Articles: foundArticle, Fields: foundField})
+            res.render("home",{Articles: foundArticle, Fields: foundField, isLoggedIn: req.session.isLoggedIn});
         })
         .catch((err)=>{
             console.log(err);
@@ -114,6 +112,8 @@ app.post("/login", function(req,res){
         else{
             passport.authenticate("local")(req, res, function(){
                 console.log("welcome "+ req.user.username );
+                req.session.isLoggedIn = true;
+
 
                 // check if the users profile is completed, if not completed redirect user to complete profile page. if completed redirect user to home page
 
