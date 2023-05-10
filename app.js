@@ -252,8 +252,9 @@ app.get("/articles/:field", function(req,res){
 app.get("/articles/read/:articleId", function(req,res){     //a route for read more, to display the whole article in ine page.
     const articleId= req.params.articleId;
     Article.find({_id: articleId})
-    .then((foundArticle)=>{
-        res.send(foundArticle);     //to be renderd on new page
+    .then((foundArticle)=>{ 
+        res.render("readMore",{article: foundArticle}); 
+        console.log(foundArticle[0].title);
     })
     .catch((err)=>{
         console.log(err);
