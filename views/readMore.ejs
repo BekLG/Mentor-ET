@@ -16,7 +16,13 @@
         <h2 class="blog-post-title "> <%=article[0].title%></h2>
         <p class="blog-post-meta"><%= article[0].datePublished.substring(4,15) %> by <a href="#"><%= article[0].author%></a></p>
 
-        <p><%= article[0].content %></p>
+        <% const paragraph=article[0].content %>
+        <% const paragraphs = paragraph.split('\n'); %>
+
+        <% paragraphs.forEach(p => { %>
+            <p><%= p %></p>
+        <% }); %>
+
 
     </article>
     <div class="toggle-container">
