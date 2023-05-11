@@ -39,10 +39,9 @@
                     <input type="hidden" name="articleId" value="<%= article._id%>">
                     <button class="btn btn-outline-primary rounded-pill" type="submit">Approve</button>
                   </form>
-                  
                 </article>
-                <%})%>
 
+                <%})%>
 
         </div>
             
@@ -53,14 +52,16 @@
             <h1 class="header">Add Field  </h1>
             <form action="/" method="post">
                 <input class="form-inline " type="text" name="Field" id="" placeholder="Add Field">
-                <button class="Add-btn " type="submit">+</button>
+                <button class="Add-btn " type="submit">add</button>
             </form>
             <div class="Field-lists">
                 <h4 style="text-align: center;">Field list</h4>
                 <ul class="list-container">
-                    <li class="item">Accounting</li>
-                    <li class="item">Computer Science</li>
-                    <li class="item">Management</li>
+
+                    <% Fields.forEach(field => { %>
+                        
+                        <li class="item"><%= field.name %></li>
+                      <% }) %>
                 </ul>
             </div>
 

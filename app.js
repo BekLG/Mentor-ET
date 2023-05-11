@@ -265,8 +265,17 @@ app.get("/articles/read/:articleId", function(req,res){     //a route for read m
 app.get("/admin", function(red,res){
     Article.find({approved:false}) // filter articles that are not approved yet
     .then((foundArticle)=>{
+
+        Field.find({})  //fetch all fields
+        .then((foundField)=>{
+            res.render("admin",{Articles: foundArticle, Fields: foundField});
+        })
+        .catch((err)=>{
+            console.log(err);
+        })  
+
         
-        res.render("admin",{Articles: foundArticle})
+       
     })
     .catch((err)=>{
         console.log(err);
@@ -287,9 +296,6 @@ app.post("/admin/approvePost", function(req,res){
      })  
 })
 
-app.get("/admin/fields", function(req,res){
-    res.send("a page that contains form to add a new field.")
-})
 app.post("/admin/addField", function(req,res){
     const field= new Field({
         name: req.body.name,
