@@ -13,8 +13,10 @@
 
 <body>
   <div class="carousel-container">
-    <div class=" carousel-indicator carousel-dark">
-      <button type="button " class="indicator-button active-btn" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active">Login</button>
+    <h3>Please Login To Continue</h3>
+    <div class=" carousel-indicator">
+      
+      <button type="button" class="active-btn indicator-button " data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active">Login</button>
       <button type="button" class="indicator-button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1">Sign in</button>
 
     </div>
@@ -26,13 +28,12 @@
         <div class="carousel-item active" data-bs-interval="10000">
 
           <div class="container">
-            <h1>log In</h1>
             <form action="/login" method="post">
               <label for="username" class="form-label">Username</label>
               <input type="text" id="username" class="form-control" name="username" required>
               <label for="password" class="form-label" >Password</label>
               <input type="password" id="password" class="form-control" name="password" required>
-              <button type="submit"> <strong>log in</strong></button>
+              <button type="submit"> <strong>Login</strong></button>
 
             </form>
           </div>
@@ -40,7 +41,6 @@
 
         <div class="carousel-item" data-bs-interval="2000">
           <div class="container">
-            <h1>Sign In</h1>
             <form action="/register" method="post" id="sign-in-form">
               <label for="username" class="form-label">Email</label>
               <input type="email" id="username" class="form-control" name="username" required>
@@ -48,7 +48,7 @@
               <input type="password" id="password" class="form-control" name="password" required>
               <label for="password" class="form-label">comfrim password</label>
               <input type="password" id="comfrim-password" class="form-control" name="comfrim-password" required>
-              <button type="submit">Sign In</button>
+              <button type="submit"><strong>Sign Up</strong></button>
             </form>
           </div>
         </div>

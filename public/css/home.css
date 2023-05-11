@@ -6,7 +6,16 @@ html{
    scroll-behavior: smooth;
 }
 .navbar {
-  background-color: #25218D;
+  background-color: #ffffff ;
+  color: black;
+}
+.nav-links{
+  color: black;
+}
+.BeMentor-btn{
+  background-color: #002c58;
+  height: 20px;
+  width: 50px;
 }
 .main-banner {
   display: flex;
@@ -17,7 +26,7 @@ html{
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color:  #ffffff;
+  background-color:  #f2f2f2;
   height: 100vh;
 }
 .banner-description {
@@ -83,6 +92,7 @@ img {
   border-radius: 10px;
   box-shadow: 0px 4px 15px hsl(355deg 25% 15% / 10%);
   padding: 10px;
+  background-color: #66cccc;
 }
 .post-title {
   margin: 20px auto;
@@ -107,12 +117,12 @@ img {
 }
 .read-more-button {
   margin: 20px 0px 30px;
-  background-color: #f88400;
+  background-color: #002c58;
   width: 100px;
   height: 40px;
   border-radius: 10px;
   box-shadow: 0px 8px 15px hsl(355deg 25% 15% / 10%);
-  border: #f88400 1px solid;
+  border: #002c58 1px solid;
 }
 .read-more-button a {
   text-decoration: none;
@@ -129,7 +139,7 @@ img {
   width: 40px;
 }
 .profile-name{
-   color: #25218D;
+   color: #090F1F;
 }
 /*something section */
 /* #Something{
@@ -175,7 +185,4 @@ img {
    transform: rotate(180deg);
  }
 /* style for footer */
-footer {
-  background-color: rgb(253, 255, 254);
-  color: black;
-}
+
