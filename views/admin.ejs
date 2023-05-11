@@ -19,40 +19,50 @@
 
         <div class="article-privew col-lg-4 col-sm-12">
             <h1 class="header"> New Articles</h1>
-            <article class="blog-post">
-                <h2 class="blog-post-title mb-1">freelancing</h2>
-                <p class="blog-post-meta">May 03 2023 by <a href="#">Gethaun Fikadu</a></p>
 
-                <p> frelancing is very good frelancing is very good frelancing is very good frelancing is very good
-                    frelancing is very good frelancing is very good frelancing is very good frelancing is very good
-                    frelancing is very good frelancing is very good frelancing is very good frelancing is very good
-                    frelancing is very good frelancing is very good frelancing is very good ...</p>
 
-                <br>
-                <br>
-                <div class="buttons">
-                    <a class="btn btn-outline-primary rounded-pill" href="/articles/read/6452643947c90567674170ea">Read
-                        More</a>
-                        <button class="btn btn-outline-primary rounded-pill" type="submit">Approve</button>
-               
-                </div>
-            </article>
+            <%Articles.forEach(function(article){ %>
+
+
+
+
+                <article class="blog-post-container">
+                  <h2 class="blog-post-title mb-1"><%= article.title%></h2>
+                  <p class="blog-post-meta"><%= article.datePublished.substring(4,15)%> by <a href="#"><%= article.author%></a></p>
+        
+                  <p><%= article.content.substring(0,400)+"..."%></p>
+                  
+                  <br>
+                  <br>
+                  <a class="btn btn-outline-primary rounded-pill" href="/articles/read/<%=article._id%>">Read More</a>
+                  <form action="/admin/approvePost" method="post">
+                    <input type="hidden" name="articleId" value="<%= article._id%>">
+                    <button class="btn btn-outline-primary rounded-pill" type="submit">Approve</button>
+                  </form>
+                </article>
+
+                <%})%>
+
         </div>
+            
 
         <!-- Add Fields section -->
 
         <div class="field-add col-lg-4 col-sm-12">
             <h1 class="header">Add Field  </h1>
-            <form action="/" method="post">
-                <input class="form-inline " type="text" name="Field" id="" placeholder="Add Field">
-                <button class="Add-btn " type="submit">+</button>
+            <form action="/admin/addField" method="post">
+                <input class="form-inline " type="text" name="name" id="" placeholder="Field name">
+                <input class="form-inline " type="text" name="category" id="" placeholder="Field category">
+                <button class="Add-btn " type="submit">add</button>
             </form>
             <div class="Field-lists">
                 <h4 style="text-align: center;">Field list</h4>
                 <ul class="list-container">
-                    <li class="item">Accounting</li>
-                    <li class="item">Computer Science</li>
-                    <li class="item">Management</li>
+
+                    <% Fields.forEach(field => { %>
+                        
+                        <li class="item"><%= field.name %></li>
+                      <% }) %>
                 </ul>
             </div>
 
