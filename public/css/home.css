@@ -3,14 +3,27 @@ body {
   padding: 0;
 }
 html{
-   scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
 .navBar {
    height: 5rem;
 }
 .nav-links{
   color: rgb(255, 255, 255);
 }
+.nav-link{
+  display: block;
+  padding: 0.5rem;
+  color: black;
+  font-weight:500;
+  font-size: 17px;
+  text-decoration: none;
+  background: 0;
+  border: 0;
+  transition: 15ms;
+}
+
 .BeMentor-btn{
   background-color: #059862;
   border: none;
@@ -19,17 +32,22 @@ html{
   border-radius: 5px;
   font-size: 16px;
 }
+
 .main-banner {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 0;
-  background-color:  #D9EEE1;
+  background-image: url(/images/circle-scatter-haikei\ blue.svg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:  #282A35!important;
   height: 100vh;
 }
 .banner-description {
-   display: flex;
-   align-items: center;
+  display: flex;
+  align-items: center;
   width: 80%;
   height: 80%;
 }
@@ -40,22 +58,28 @@ html{
    text-align: center;
 }
 .hero-join{
-   color: black;
-   font-size: 1.1rem;
-   font-weight: 900;
+   color: white;
+   /* font-size: 1.1rem;
+   font-weight: 900; */
 
 }
 .hero-enhance{
-   color: #FB7267;
-   font-size: 2.9rem;
+   /* color: #FB7267; */
+   color: white!important;
+   font-size: 3.9rem;
    font-weight: 900;
   
+}
+.hero-mentor {
+  color: #FFC0C7;
+  font-size: 1.8rem;
 }
 .hero-uni{
    color:#f88400;
    font-size: 3.5rem;
    font-weight: 900;
 }
+
 /* cards style */
 .card-container {
  padding-top: 3rem;
