@@ -13,16 +13,95 @@
 </head>
 
 <body>
-  
-    <%- include('partials/header', {Fields:Fields, isLoggedIn:isLoggedIn}) %>
-   
-   
+    <nav class="navBar navbar navbar-expand-lg sticky-top" style="background-color: #000;">
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MentorET</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-links active" aria-current="page" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-links dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Field
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <% Fields.forEach((field)=>{%>
+                                <li><a class="dropdown-item" href="/articles/<%= field.name%>"><%= field.name%></a></li>
+                                <% }) %>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-links active" aria-current="page" href="/articles">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-links active" aria-current="page" href="#">About</a>
+                        </li>
+                       
+                        <% if(isLoggedIn){ %>
+
+                            <li>
+                                <button class="btn btn-sm btn-outline-success " type="submit"><a class="nav-links" href="/composeArticle">compose article</a></button>
+                            </li>
+                            <li>
+                                <button class="btn btn-sm btn-outline-success " type="submit"><a class="nav-links" href="#">My profile</a></button>
+                            </li>
+                            <li>
+                                <button class="btn btn-sm btn-outline-success " type="submit"><a class="nav-links" href="/logout">Logout</a></button>
+                            </li>
+
+                        <% } else {%>
+
+                            <li>
+                                <button class="BeMentor-btn" type="submit"><a href="/signInUp">Be a Mentor</a></button>
+                            </li>
+
+                        <% } %>
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+    </nav>
     <section class="main-banner">
+          
         <div class="banner-description row ">
-            <div class="hero-container col-lg-6 col-sm-12">
-                <h1 class="hero-enhance">Explore, Learn, and Connect</h1>
-                <h2 class="hero-mentor">Experience the Power of Mentorship!</h2>
-                <p class="hero-join">Join our community Today</p>
+           
+
+
+
+
+            <div class="hero-container col-12">
+                <h6 class="hero-join">Join Our Community Today</h6>
+                <div class="wrapper">
+                    <div class="static-text">
+                        <ul class="dynamic-texts">
+                            <li><span>Mentorship for Success</span></li>
+                            <li><span>Unleash Your Potential</span></li>
+                            <li><span>Empower Your Journey</span></li>
+                            <li><span>Connect for a Brighter Future </span></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="hero-enhance">With</p>
+                <p class="hero-uni ">Mentor-ET</p>
             </div>
 
         </div>
@@ -30,7 +109,7 @@
 
     <section class="card-container">
 
-        <h2 class="hero-enhance" >Most viewed Articles</h2>
+        <h2 class="section-title" >Most viewed Articles</h2>
         <div class="post post-container ">
 
             <%Articles.forEach(function(article){ %>

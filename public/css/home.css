@@ -3,52 +3,51 @@ body {
   padding: 0;
 }
 html{
-  scroll-behavior: smooth;
+   scroll-behavior: smooth;
 }
-
 .navBar {
    height: 5rem;
 }
 .nav-links{
   color: rgb(255, 255, 255);
-
-}
-.nav-link{
-  display: block;
-  padding: 0.5rem;
-  color: black;
-  font-weight:500;
-  font-size: 17px;
+  padding: 30px;
+  font-weight: 400;
   text-decoration: none;
-  background: 0;
-  border: 0;
-  transition: 15ms;
 }
-
+.nav-links:hover{
+background-color: #035839;
+}
 .BeMentor-btn{
   background-color: #059862;
   border: none;
+  text-align: center;
+  width:120px;
+  height: 40px;
   color: #f2f2f2;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 20px;
   font-size: 16px;
 }
-
+.BeMentor-btn a{
+text-decoration: none; 
+color:#D9EEE1;
+font-weight: 600;
+}
+.BeMentor-btn:hover{
+  background-color: #035839;
+  color: #f2f2f2;
+}
 .main-banner {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 0;
-  background-image: url(/images/circle-scatter-haikei\ blue.svg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color:  #282A35!important;
+  background-color:  #D9EEE1;
   height: 100vh;
 }
 .banner-description {
-  display: flex;
-  align-items: center;
+   display: flex;
+   align-items: center;
   width: 80%;
   height: 80%;
 }
@@ -58,34 +57,78 @@ html{
    height: 50%;
    text-align: center;
 }
+.wrapper{
+  display: flex;
+}
+.wrapper .dynamic-texts li{
+  list-style: none;
+  text-align: center;
+  color: #059862;
+  font-size: 60px;
+  font-weight: 500;
+  top: 0;
+  position: relative;
+  animation: slide 20s steps(4) infinite;
+  
+
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+  
+}
+.dynamic-texts{
+  margin-left: 3.5rem;
+  line-height: 90px;
+  height: 90px;
+  text-align: center;
+  overflow: hidden;
+}
+.dynamic-texts li::after{
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: #D9EEE1;
+  border-left: 2px solid rgba(255, 255, 0, 0);
+  animation: typping 5s steps(22) infinite;
+}
+@keyframes typping {
+  40%,60%{
+     left:calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+  
+}
 .hero-join{
-   color: white;
-   /* font-size: 1.1rem;
-   font-weight: 900; */
+   color: black;
+   font-size: 1.1rem;
+   font-weight: 900;
 
 }
 .hero-enhance{
-   /* color: #FB7267; */
-   color: white!important;
-   font-size: 3.9rem;
+   color: #FB7267;
+   font-size: 2.9rem;
    font-weight: 900;
   
 }
-.hero-mentor {
-  color: #FFC0C7;
-  font-size: 1.8rem;
-}
 .hero-uni{
-   color:#f88400;
+   color:#282A35;
    font-size: 3.5rem;
    font-weight: 900;
 }
-
 /* cards style */
+.section-title{
+  color: #059862;
+  text-align: center;
+}
 .card-container {
  padding-top: 3rem;
- background-image: url(/images/circle-scatter-haikei.svg);
- background-attachment: fixed;
+ background-image: url(/images/);
  background-repeat: no-repeat;
  background-size: cover;
  padding-bottom: 3rem;
@@ -137,12 +180,12 @@ img {
 }
 .read-more-button {
   margin: 20px 0px 30px;
-  background-color: #002c58;
+  background-color: #059862;
   width: 100px;
   height: 40px;
   border-radius: 10px;
   box-shadow: 0px 8px 15px hsl(355deg 25% 15% / 10%);
-  border: #002c58 1px solid;
+  border: #038052 1px solid;
 }
 .read-more-button a {
   text-decoration: none;
@@ -168,12 +211,12 @@ img {
 } */
 /*e for FAQ section */
 #FAQ{
-   background-image: url(/images/wave.svg);
+   background-image: url(/images/);
    background-repeat: no-repeat;
    color: #fff;
 }
 .active{
-   background-color: #f88400;
+   /* background-color: #f88400; */
 }
 .faq {
   
