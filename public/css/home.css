@@ -8,6 +8,10 @@ html{
 .navBar {
    height: 5rem;
 }
+.nav-items {
+  display: flex;
+  align-items: center;
+}
 .nav-links{
   color: rgb(255, 255, 255);
   padding: 30px;
@@ -124,11 +128,13 @@ font-weight: 600;
 /* cards style */
 .section-title{
   color: #059862;
+  
   text-align: center;
 }
 .card-container {
+  height: 100vh;
  padding-top: 3rem;
- background-image: url(/images/);
+ background-image: url(/images/1.svg);
  background-repeat: no-repeat;
  background-size: cover;
  padding-bottom: 3rem;
@@ -137,8 +143,10 @@ background-color: #fff;
 .post-container {
   width: 80%;
   padding:2rem;
+  
   margin: 0 auto;
 }
+
 img {
   width: 100%;
   object-fit: cover;
@@ -156,6 +164,11 @@ img {
   box-shadow: 0px 4px 15px hsl(355deg 25% 15% / 10%);
   padding: 10px;
   background-color: #66cccc;
+  transition: all .5s;
+}
+.post-box:hover{
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 15px hsla(357, 25%, 15%, 0.719);
 }
 .post-title {
   margin: 20px auto;
@@ -211,16 +224,13 @@ img {
 } */
 /*e for FAQ section */
 #FAQ{
-   background-image: url(/images/);
-   background-repeat: no-repeat;
-   color: #fff;
-}
-.active{
-   /* background-color: #f88400; */
+   background-color: #96D4D4;
+   color: #000;
+   padding: 20px;
 }
 .faq {
   
-  border: 1px solid #ccc;
+  border: .5px solid #201b1b;
   margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: 0px 8px 15px hsl(355deg 25% 15% / 10%);

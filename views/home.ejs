@@ -22,7 +22,7 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+            <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasDarkNavbar"
                 aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
@@ -30,12 +30,12 @@
                         aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
+                    <ul class="navbar-nav justify-content-end  flex-grow-1 pe-3">
+                        <li class="nav-items ">
                             <a class="nav-links active" aria-current="page" href="#">Home</a>
                         </li>
 
-                        <li class="nav-item dropdown">
+                        <li class="nav-items dropdown">
                             <a class="nav-links dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Field
@@ -46,28 +46,28 @@
                                 <% }) %>
                             </ul>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-items">
                             <a class="nav-links active" aria-current="page" href="/articles">Articles</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-items">
                             <a class="nav-links active" aria-current="page" href="#">About</a>
                         </li>
                        
                         <% if(isLoggedIn){ %>
 
-                            <li>
-                                <button class="btn btn-sm btn-outline-success " type="submit"><a class="nav-links" href="/composeArticle">compose article</a></button>
+                            <li class="nav-items">
+                                <button class="BeMentor-btn " type="submit"><a href="/composeArticle">compose article</a></button>
                             </li>
-                            <li>
-                                <button class="btn btn-sm btn-outline-success " type="submit"><a class="nav-links" href="#">My profile</a></button>
+                            <li class="nav-items">
+                                <button class="BeMentor-btn " type="submit"><a  href="#">My profile</a></button>
                             </li>
-                            <li>
-                                <button class="btn btn-sm btn-outline-success " type="submit"><a class="nav-links" href="/logout">Logout</a></button>
+                            <li class="nav-items">
+                                <button class="BeMentor-btn " type="submit"><a  href="/logout">Logout</a></button>
                             </li>
 
                         <% } else {%>
 
-                            <li>
+                            <li class="nav-items">
                                 <button class="BeMentor-btn" type="submit"><a href="/signInUp">Be a Mentor</a></button>
                             </li>
 
