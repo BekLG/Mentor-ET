@@ -15,8 +15,6 @@ body {
   -webkit-backdrop-filter: blur(6.8px);
 }
 .active-btn{
-  border: 1px black solid;
-  border-bottom: none;
   border-radius: 10px 10px 0 0;
   color: #fff;
   background: linear-gradient(#fff, #fff);
@@ -33,7 +31,9 @@ body {
 h3{
   text-align: center;
   color: #ffffff;
-  background: rgba(0, 0, 0, 0.336);
+  margin-bottom: 0;
+  background:  #33333388;
+  padding: 10px;
 
 }
 label {
@@ -62,7 +62,7 @@ form button {
 .carousel-indicator button {
   width: 100%;
   padding: 10px 20px;
-  border-radius: 2px;
+  border-radius: 1px;
   color: #000000;
   background-color: #33333388;
   border: none;
