@@ -302,7 +302,7 @@ app.post("/admin/addField", function(req,res){
         category: req.body.category
     })
     field.save();
-    res.redirect("/admin/fields");
+    res.redirect("/admin");
 })
 
 
