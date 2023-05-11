@@ -220,7 +220,7 @@ app.get("/articles",function(req,res){
         
         Field.find({})  //fetch all fields
         .then((foundField)=>{
-            res.render("blog",{Articles: foundArticle, Fields: foundField});
+            res.render("blog",{Articles: foundArticle, Fields: foundField, isLoggedIn: req.session.isLoggedIn});
         })
         .catch((err)=>{
             console.log(err);
@@ -239,7 +239,7 @@ app.get("/articles/:field", function(req,res){
 
         Field.find({})  //fetch all fields
         .then((foundField)=>{
-            res.render("blog",{Articles: foundArticle, Fields: foundField});
+            res.render("blog",{Articles: foundArticle, Fields: foundField, isLoggedIn: req.session.isLoggedIn});
         })
         .catch((err)=>{
             console.log(err);
