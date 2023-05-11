@@ -1,41 +1,40 @@
 body {
   font-family: Arial, sans-serif;
-  background-image: linear-gradient(
-    45deg,
-    rgba(11, 0, 112, 0.678) 50%,
-    rgba(255, 255, 255, 0.959) 50%
-  );
+  
   background-attachment: fixed;
   display: flex;
   justify-content: center;
 }
 .carousel-container {
   margin: 50px auto;
-  padding: 50px;
-  width: 50%;
-  border-radius: 10px;
-
-  background: rgba(255, 255, 255, 0.37);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.637);
+  height:400px ;
+  width: 30rem;
+  background: rgba(255, 255, 255, 0.123);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.363);
   backdrop-filter: blur(6.8px);
   -webkit-backdrop-filter: blur(6.8px);
 }
 .active-btn{
-  background-image: linear-gradient(300deg,#FB7267 ,#812b24);
+  border: 1px black solid;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  color: #fff;
+  background: linear-gradient(#fff, #fff);
 }
+
 .container {
   width: 100%;
-  /* margin: 50px auto; */
-  background-color: #ffffff00;
+  background-color: #fffffff3;
   border-radius: 10px;
   padding: 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+h3{
   text-align: center;
-  color: #000000;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.336);
+
 }
 label {
   display: block;
@@ -56,22 +55,15 @@ form button {
   margin: 2rem 50%;
   transition: background-color 0.3s ease;
 }
-button:hover {
-  background-color: #3e8e41;
-}
 .carousel-indicator {
   width: 100%;
-  border: 1px solid yellow;
   display: flex;
 }
 .carousel-indicator button {
   width: 100%;
-
   padding: 10px 20px;
-  border: none;
+  border-radius: 2px;
   color: #000000;
-  background-color: #33333300;
-}
-.carousel-indicator button:active{
-  background-color: yellow;
+  background-color: #33333388;
+  border: none;
 }
