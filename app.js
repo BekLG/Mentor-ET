@@ -148,6 +148,7 @@ app.get("/logout", function(req,res){
     
 });
 
+
 app.post("/register", function(req,res){
     // handle registration process here
    
