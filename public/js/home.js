@@ -18,6 +18,9 @@ for (var i = 0; i < faqs.length; i++) {
         // Toggle the display of the clicked faq
         this.nextElementSibling.style.display = (this.nextElementSibling.style.display == 'block') ? 'none' : 'block';
         this.style.transform = "rotate(180deg)";
+        if(this.nextElementSibling.style.display == 'none'){
+            this.style.transform = "rotate(0deg)";
+        }
         
     });
 }
