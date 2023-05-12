@@ -13,37 +13,15 @@
 </head>
 
 <body>
-
+   
     <%- include('partials/header', {Fields:Fields, isLoggedIn:isLoggedIn}) %>
-    
+   
     <section class="main-banner">
-          
         <div class="banner-description row ">
-
-           
-
-
-
-
-            <div class="hero-container col-12">
-                <h6 class="hero-join">Join Our Community Today</h6>
-                <div class="wrapper">
-                    <div class="static-text">
-                        <ul class="dynamic-texts">
-                            <li><span>Mentorship for Success</span></li>
-                            <li><span>Unleash Your Potential</span></li>
-                            <li><span>Empower Your Journey</span></li>
-                            <li><span>Connect for a Brighter Future </span></li>
-                        </ul>
-                    </div>
-                </div>
-                <p class="hero-enhance">With</p>
-                <p class="hero-uni ">Mentor-ET</p>
             <div class="hero-container col-lg-6 col-sm-12">
                 <h1 class="hero-enhance">Explore, Learn, and Connect</h1>
                 <h2 class="hero-mentor">Experience the Power of Mentorship!</h2>
                 <p class="hero-join">Join our community Today</p>
-
             </div>
 
         </div>
@@ -51,7 +29,7 @@
 
     <section class="card-container">
 
-        <h2 class="section-title" >Most viewed Articles</h2>
+        <h2 class="hero-enhance" >Most viewed Articles</h2>
         <div class="post post-container ">
 
             <%Articles.forEach(function(article){ %>
