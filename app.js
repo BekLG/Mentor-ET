@@ -212,6 +212,7 @@ app.post("/composeArticle", function(req,res){
         datePublished: currentDate
     })
 
+    
     article.save();
 
     res.redirect("/");
