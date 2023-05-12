@@ -75,6 +75,12 @@ const fieldSchema= new mongoose.Schema({
 
 const Field= new mongoose.model("field", fieldSchema);
 
+const emailSubscriberSchema= new mongoose.Schema({
+    email: String
+});
+
+const Email= new mongoose.model("email", emailSubscriberSchema);
+
 app.get("/", function(req,res){
 
         Article.find({approved:true}).limit(3) // select only 3 articles,       selecting criterea will be modified.
@@ -233,9 +239,6 @@ app.get("/articles",function(req,res){
         console.log(err);
     })
 })
-
-
-
 
 app.get("/articles/:field", function(req,res){
     const field= req.params.field;
