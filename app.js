@@ -218,7 +218,7 @@ app.post("/composeArticle", function(req,res){
 app.get("/articles",function(req,res){
     Article.find({approved:true}) // filter articles that are approved by admin from database
     .then((foundArticle)=>{
-        
+            
         Field.find({})  //fetch all fields
         .then((foundField)=>{
             res.render("blog",{Articles: foundArticle, Fields: foundField, isLoggedIn: req.session.isLoggedIn});
