@@ -8,10 +8,35 @@
     <style>
         .footer{
             background-color: #282A35;
+            color: #f2f2f2;
             
         }
+        .nav-links{
+            color: rgb(255, 255, 255);
+            padding: 30px;
+            font-weight: 400;
+            text-decoration: none;
+        }
+        .nav-links:hover{
+            background-color: #035839;
+        }
+        .btn-subscribe
+        {
+            background-color: #059862;
+            border: none;
+            text-align: center;
+            width:120px;
+            height: 40px;
+            color: #f2f2f2;
 
-        /* other styles */
+            border-radius: 20px;
+            font-size: 16px;
+        }
+        .btn-subscribe:hover{
+            background-color: #035839;
+        }
+
+        
 
     </style>
 </head>
@@ -40,10 +65,10 @@
                 <div class="col-6 justify-content-center">
                     <h5>contact us</h5>
                     <ul class="list-unstyled d-flex py-3">
-                        <i class="fa-brands fa-linkedin px-2 fa-2xl" style="color: #0e5add;"></i>
-                        <i class="fa-brands fa-telegram px-2 fa-2xl" style="color: #0e5add;"></i>
-                        <i class="fa-brands fa-facebook px-2 fa-2xl" style="color: #0e5add;"></i>
-                        <i class="fa-solid fa-envelope px-2 fa-2xl" style="color: #0e5add;"></i>
+                        <i class="fa-brands fa-linkedin px-2 fa-2xl" style="color: #035839;"></i>
+                        <i class="fa-brands fa-telegram px-2 fa-2xl" style="color: #035839;"></i>
+                        <i class="fa-brands fa-facebook px-2 fa-2xl" style="color: #035839;"></i>
+                        <i class="fa-solid fa-envelope px-2 fa-2xl" style="color: #035839;"></i>
 
                     </ul>
                 </div>
@@ -55,7 +80,7 @@
                         <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                             <label for="newsletter1" class="visually-hidden">Email address</label>
                             <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                            <button class="btn btn-primary" type="button">Subscribe</button>
+                            <button class="btn btn-primary btn-subscribe" type="button">Subscribe</button>
                         </div>
                     </form>
                 </div>
