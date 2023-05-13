@@ -305,7 +305,6 @@ app.post("/admin/approvePost", function(req,res){
      })  
 })
 
-
 app.post("/admin/addField", function(req,res){
     const field= new Field({
         name: req.body.name,
@@ -315,6 +314,14 @@ app.post("/admin/addField", function(req,res){
     res.redirect("/admin");
 })
 
+app.post("/subscribeEmail", function(req,res){
+    const email= new Email({
+        email:req.body.emailAdress
+    })
+    email.save();
+    console.log("email saved");
+    res.redirect("/admin");
+})
 
 
 app.listen(3000, function(req,res){
