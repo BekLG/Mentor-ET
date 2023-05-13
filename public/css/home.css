@@ -166,6 +166,19 @@ margin-top: 90px !important;
    font-size: 3.5rem;
    font-weight: 900;
 }
+/* description section  */
+.description{
+  height: 100vh;
+  background-color: #090F1F;
+
+}
+.breif-description {
+  background-color: #0042f8;
+}
+.detailed-description{
+  background-color: #1f0918;
+
+}
 /* cards style */
 .section-title{
   color: #2E5895;
