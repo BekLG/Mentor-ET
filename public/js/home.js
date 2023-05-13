@@ -9,10 +9,7 @@ for (var i = 0; i < faqs.length; i++) {
             if (faqs[j] !== this && faqs[j].nextElementSibling.style.display === 'block') {
                 faqs[j].nextElementSibling.style.display = 'none';
                 faqs[j].style.transform = "rotate(0deg)";
-               
-               
-               
-            }
+               }
         }
        
         // Toggle the display of the clicked faq
@@ -24,3 +21,23 @@ for (var i = 0; i < faqs.length; i++) {
         
     });
 }
+//scroll efect
+
+const sections = document.querySelectorAll('.s-effect');
+const windowHeight = window.innerHeight;
+
+function checkScroll() {
+  for (let i = 0; i < sections.length; i++) {
+    const section = sections[i];
+    const rect = section.getBoundingClientRect();
+    const distance = windowHeight - rect.top;
+
+    if (distance >= 0 && distance <= windowHeight) {
+      section.classList.add('shown');
+    }
+  }
+}
+
+window.addEventListener('scroll', checkScroll);
+checkScroll();
+

@@ -8,6 +8,8 @@ html{
 }
 .navBar {
   background-color: #2E5895 !important;
+  box-shadow: 0px 4px 15px hsla(357, 25%, 15%, 0.514);
+
   height: 6rem;
   margin: 2rem auto;
   border-radius: 10px;
@@ -104,7 +106,7 @@ margin-top: 90px !important;
 }
 .wrapper .dynamic-texts li{
   list-style: none;
-  color: #059862;
+  color: #2E5895;
   margin-left: 0 !important;
   font-size: 3em;
   font-weight: 500;
@@ -154,7 +156,7 @@ margin-top: 90px !important;
 
 }
 .hero-enhance{
-   color: #FB7267;
+   color: #F39104;
    font-size: 2.9rem;
    font-weight: 900;
   
@@ -166,8 +168,7 @@ margin-top: 90px !important;
 }
 /* cards style */
 .section-title{
-  color: #059862;
-  
+  color: #2E5895;
   text-align: center;
 }
 .card-container {
@@ -202,7 +203,7 @@ img {
   border-radius: 10px;
   box-shadow: 0px 4px 15px hsl(355deg 25% 15% / 10%);
   padding: 10px;
-  background-color: #66cccc;
+  background-color: #ffff;
   transition: all .5s;
 }
 .post-box:hover{
@@ -219,7 +220,7 @@ img {
   -moz-box-orient: vertical;
 }
 .post-date{
-   color:#059862;
+   color:#2E5895;
    font-size: 0.9rem;
    font-weight: 900;
 
@@ -232,12 +233,12 @@ img {
 }
 .read-more-button {
   margin: 20px 0px 30px;
-  background-color: #059862;
+  background-color: #F69321;
   width: 100px;
   height: 40px;
   border-radius: 10px;
-  box-shadow: 0px 8px 15px hsl(355deg 25% 15% / 10%);
-  border: #038052 1px solid;
+  box-shadow: 0px 8px 15px hsla(357, 25%, 15%, 0.349);
+  border: #F69321 1px solid;
 }
 .read-more-button a {
   text-decoration: none;
@@ -261,6 +262,17 @@ img {
 
   
 } */
+.s-effect {
+  transform: translateY(70px);
+  opacity: 0;
+  transition: transform 1.5s ease,
+              opacity .5s ease-out;
+}
+.s-effect.shown {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
 /*e for FAQ section */
 #FAQ{
    background-color: #96D4D4;
@@ -269,17 +281,16 @@ img {
 }
 .faq {
   
-  border: .5px solid #201b1b;
-  margin-bottom: 20px;
+  border: .5px solid #201b1b42;
+  margin-bottom: 5px;
   border-radius: 10px;
-  box-shadow: 0px 8px 15px hsl(355deg 25% 15% / 10%);
-  padding: 10px;
+  box-shadow: 0px 8px 15px hsla(357, 25%, 15%, 0.493);
+  padding: 5px;
 }
 .faq h3 {
   margin-top: 0;
-
   font-size: 20px;
-  font-weight: bold;
+  font-weight:200;
   cursor: pointer;
 }
 .faq p {
@@ -297,3 +308,30 @@ img {
    transform: rotate(180deg);
  }
 /* style for footer */
+footer{
+  background-color: #D9EEE1;
+}
+.newsletter-heading{
+  color:#090F1F;
+}
+.Email-input{
+  border-radius: 10px;
+  border: #D9EEE1 .5px solid;
+  width: 100%;
+  background-color: #867d7d;
+  height: 40px;
+  outline: none;
+}
+.Email-input:focus {
+  border: #1f201f .5px solid;
+}
+.subscribe-btn{
+  margin: 20px 0px 30px;
+  background-color: #F69321;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px hsla(357, 25%, 15%, 0.349);
+  border: #F69321 1px solid;
+
+}
