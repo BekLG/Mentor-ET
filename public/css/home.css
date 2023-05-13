@@ -1,16 +1,22 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #D9EEE1!important;
 }
 html{
    scroll-behavior: smooth;
 }
 .navBar {
-  height: 5rem;
+  background-color: #2E5895 !important;
+  height: 6rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  width: 80%;
 }
 .nav-items {
  display: flex;
  align-items: center;
+
 }
 .nav-links{
  color: rgb(255, 255, 255);
@@ -22,11 +28,11 @@ html{
 background-color: #035839;
 }
 .BeMentor-btn{
- background-color: #059862;
+ background-color: #F69321;
  border: none;
  text-align: center;
  width:120px;
- height: 40px;
+ height:70%;
  color: #f2f2f2;
  margin-bottom: 10px;
  border-radius: 20px;
@@ -38,7 +44,9 @@ color:#D9EEE1;
 font-weight: 600;
 }
 .BeMentor-btn:hover{
- background-color: #035839;
+ background-color: #fd8700;
+ box-shadow: 0px 4px 15px hsl(355deg 25% 15% / 10%);
+
  color: #f2f2f2;
 }
 .main-banner {
