@@ -12,7 +12,26 @@ html{
   margin: 2rem auto;
   border-radius: 10px;
   width: 80%;
+  animation: slide1 1s linear forwards;
 }
+/* nav bar slide  */
+.slide2 {
+  opacity: 0;
+  animation: slide3 1s linear forwards;
+  animation-delay: .5s;
+}
+
+@keyframes slide1 {
+  0% {
+      opacity: 0;
+      width: 0;
+  }
+  100% {
+      opacity: 100%;
+  }
+}
+
+
 .nav-items {
  display: flex;
  align-items: center;
