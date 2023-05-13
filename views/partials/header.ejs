@@ -6,114 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-.navBar {
-   height: 5rem;
-}
-.nav-items {
-  display: flex;
-  align-items: center;
-}
-.nav-links{
-  color: rgb(255, 255, 255);
-  padding: 30px;
-  font-weight: 400;
-  text-decoration: none;
-}
-.nav-links:hover{
-background-color: #035839;
-}
-.BeMentor-btn{
-  background-color: #059862;
-  border: none;
-  text-align: center;
-  width:120px;
-  height: 40px;
-  color: #f2f2f2;
-  margin-bottom: 10px;
-  border-radius: 20px;
-  font-size: 16px;
-}
-.BeMentor-btn a{
-text-decoration: none; 
-color:#D9EEE1;
-font-weight: 600;
-}
-.BeMentor-btn:hover{
-  background-color: #035839;
-  color: #f2f2f2;
-}
+
     </style>
 </head>
 <body>
     
-
-    <nav class="navBar navbar navbar-expand-lg sticky-top" style="background-color: #000;">
-
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">MentorET</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end  flex-grow-1 pe-3">
-                        <li class="nav-items ">
-                            <a class="nav-links active" aria-current="page" href="/">Home</a>
-                        </li>
-
-                        <li class="nav-items dropdown">
-                            <a class="nav-links dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Field
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <% Fields.forEach((field)=>{%>
-                                <li><a class="dropdown-item" href="/articles/<%= field.name%>"><%= field.name%></a></li>
-                                <% }) %>
-                            </ul>
-                        </li>
-                        <li class="nav-items">
-                            <a class="nav-links active" aria-current="page" href="/articles">Articles</a>
-                        </li>
-                        <li class="nav-items">
-                            <a class="nav-links active" aria-current="page" href="#">About</a>
-                        </li>
-                       
-                        <% if(isLoggedIn){ %>
-
-                            <li class="nav-items">
-                                <button class="BeMentor-btn " type="submit"><a href="/composeArticle">compose article</a></button>
-                            </li>
-                            <li class="nav-items">
-                                <button class="BeMentor-btn " type="submit"><a  href="#">My profile</a></button>
-                            </li>
-                            <li class="nav-items">
-                                <button class="BeMentor-btn " type="submit"><a  href="/logout">Logout</a></button>
-                            </li>
-
-                        <% } else {%>
-
-                            <li class="nav-items">
-                                <button class="BeMentor-btn" type="submit"><a href="/signInUp">Be a Mentor</a></button>
-                            </li>
-
-                        <% } %>
-
-
-
-
-                    </ul>
-                </div>
-            </div>
-    </nav>
 
 
 </body>
