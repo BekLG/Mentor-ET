@@ -5,7 +5,42 @@ body {
 html{
    scroll-behavior: smooth;
 }
-
+.navBar {
+  height: 5rem;
+}
+.nav-items {
+ display: flex;
+ align-items: center;
+}
+.nav-links{
+ color: rgb(255, 255, 255);
+ padding: 30px;
+ font-weight: 400;
+ text-decoration: none;
+}
+.nav-links:hover{
+background-color: #035839;
+}
+.BeMentor-btn{
+ background-color: #059862;
+ border: none;
+ text-align: center;
+ width:120px;
+ height: 40px;
+ color: #f2f2f2;
+ margin-bottom: 10px;
+ border-radius: 20px;
+ font-size: 16px;
+}
+.BeMentor-btn a{
+text-decoration: none; 
+color:#D9EEE1;
+font-weight: 600;
+}
+.BeMentor-btn:hover{
+ background-color: #035839;
+ color: #f2f2f2;
+}
 .main-banner {
   display: flex;
   justify-content: center;
