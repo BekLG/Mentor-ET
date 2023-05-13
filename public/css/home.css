@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #D9EEE1!important;
+  background-color: #FFFFFF!important;
 }
 html{
    scroll-behavior: smooth;
@@ -14,12 +14,8 @@ html{
   width: 80%;
   animation: slide1 1s linear forwards;
 }
+
 /* nav bar slide  */
-.slide2 {
-  opacity: 0;
-  animation: slide3 1s linear forwards;
-  animation-delay: .5s;
-}
 
 @keyframes slide1 {
   0% {
@@ -50,12 +46,24 @@ background-color: #035839;
  background-color: #F69321;
  border: none;
  text-align: center;
+ opacity: 0;
  width:120px;
  height:70%;
  color: #f2f2f2;
  margin-bottom: 10px;
  border-radius: 20px;
  font-size: 16px;
+ animation: slide2 1s linear forwards;
+ animation-delay: .8s;
+}
+@keyframes slide2 {
+  0% {
+      opacity: 0;
+     
+  }
+  100% {
+      opacity: 1;
+  }
 }
 .BeMentor-btn a{
 text-decoration: none; 
@@ -69,25 +77,41 @@ font-weight: 600;
  color: #f2f2f2;
 }
 .main-banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0;
-  background-color:  #D9EEE1;
-  height: 100vh;
+ 
+  background-color:  #FFFFFF;
+  width: 100%;
+  height: 80vh;
+  
 }
-.banner-description {
+.hero-container{
+  padding: 2em;
+  height: 100%;
+  background-color: #00000000;
+  opacity: 0;
+  animation: slide2 1s linear forwards;
+ animation-delay: .8s;
+}
+.hero-description{
+margin-top: 90px !important;
+}
+.hero-image{
+  background: url(/images/mentor1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+   
+
+  
+}
+/* .banner-description {
    display: flex;
    align-items: center;
+   background-color:  #098b3b;
   width: 80%;
   height: 80%;
-}
+} */
 
-.hero-container{
-   margin: 1.3rem 0;
-   height: 50%;
-   text-align: center;
-}
+
 .wrapper{
   display: flex;
 }
@@ -165,7 +189,7 @@ font-weight: 600;
  background-repeat: no-repeat;
  background-size: cover;
  padding-bottom: 3rem;
-background-color: #fff; 
+background-color: #D9EEE1; 
 } 
 .post-container {
   width: 80%;
