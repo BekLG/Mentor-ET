@@ -98,28 +98,15 @@ margin-top: 90px !important;
   background: url(/images/mentor1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  
-   
-
-  
 }
-/* .banner-description {
-   display: flex;
-   align-items: center;
-   background-color:  #098b3b;
-  width: 80%;
-  height: 80%;
-} */
-
-
 .wrapper{
   display: flex;
 }
 .wrapper .dynamic-texts li{
   list-style: none;
-  text-align: center;
   color: #059862;
-  font-size: 60px;
+  margin-left: 0 !important;
+  font-size: 3em;
   font-weight: 500;
   top: 0;
   position: relative;
@@ -134,10 +121,8 @@ margin-top: 90px !important;
   
 }
 .dynamic-texts{
-  margin-left: 3.5rem;
   line-height: 90px;
   height: 90px;
-  text-align: center;
   overflow: hidden;
 }
 .dynamic-texts li::after{
@@ -146,7 +131,7 @@ margin-top: 90px !important;
   height: 100%;
   width: 100%;
   left: 0;
-  background-color: #D9EEE1;
+  background-color: #ffffff;
   border-left: 2px solid rgba(255, 255, 0, 0);
   animation: typping 5s steps(22) infinite;
 }
@@ -158,6 +143,9 @@ margin-top: 90px !important;
     left: 0;
   }
   
+}
+.hero-stst{
+  margin-left:40px;
 }
 .hero-join{
    color: black;
