@@ -320,7 +320,7 @@ app.post("/subscribeEmail", function(req,res){
     })
     email.save();
     console.log("email saved");
-    res.redirect("/admin");
+    res.redirect("/");
 })
 
 
