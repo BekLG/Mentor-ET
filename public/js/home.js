@@ -22,22 +22,29 @@ for (var i = 0; i < faqs.length; i++) {
     });
 }
 //scroll efect
-
 const sections = document.querySelectorAll('.s-effect');
+const leftParagraphs = document.querySelectorAll('.effect-l');
+const rightParagraphs = document.querySelectorAll('.effect-r'); // added a new const for right paragraphs
+
 const windowHeight = window.innerHeight;
 
-function checkScroll() {
-  for (let i = 0; i < sections.length; i++) {
-    const section = sections[i];
-    const rect = section.getBoundingClientRect();
-    const distance = windowHeight - rect.top;
-
-    if (distance >= 0 && distance <= windowHeight) {
-      section.classList.add('shown');
+function checkScrollArea(array, className) { // combined the two scroll functions into one and added new parameters
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        const rect = element.getBoundingClientRect();
+        const distance = windowHeight - rect.top;
+        if (distance >= 0 && distance <= windowHeight) {
+            element.classList.add(className);
+        }
     }
-  }
 }
 
-window.addEventListener('scroll', checkScroll);
-checkScroll();
+window.addEventListener('scroll', function() { 
+    checkScrollArea(sections, 'shown'); // changed to one function call
+    checkScrollArea(leftParagraphs, 'shown'); // changed to one function call
+    checkScrollArea(rightParagraphs, 'shown'); // added the right paragraphs to the function call
+});
 
+checkScrollArea(sections, 'shown');
+checkScrollArea(leftParagraphs, 'shown');
+checkScrollArea(rightParagraphs, 'shown');

@@ -70,7 +70,7 @@
 
                         <% } else {%>
 
-                        <li class="nav-items">
+                        <li class="">
                             <button class="BeMentor-btn" type="submit"><a href="/signInUp">Be a Mentor</a></button>
                         </li>
 
@@ -87,7 +87,7 @@
 
     <section class="main-banner">
         <div class="hero-container row">
-            <div class="hero-description col-7">
+            <div class="hero-description col-lg-7 col-sm-12">
                 <h6 class="hero-join hero-stst">Join Our Community Today</h6>
                 <div class="wrapper">
 
@@ -104,25 +104,25 @@
                 <p class="hero-uni hero-stst">Mentor-ET</p>
             </div>
 
-            <div class="hero-image col-5">
+            <div class="hero-image col-lg-5 col-sm-12">
             </div>
 
         </div>
     </section>
     <section class="description row">
-        <div class="breif-description col-6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+        <div class="breif-description col-6 text-center">
+            <p class="effect-l">Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Iusto soluta voluptatum laudantium dolore sit doloribus, aliquid saepe nesciunt error ex
                 non aspernatur. Accusamus neque ut assumenda veniam alias. Laboriosam, iusto.</p>
                 <br>
                 <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+            <p class="effect-l">Lorem ipsum dolor sit amet, consectetur adipisicing
                     elit. Iusto soluta voluptatum laudantium dolore sit doloribus, aliquid saepe nesciunt error ex
                     non aspernatur. Accusamus neque ut assumenda veniam alias. Laboriosam, iusto.</p>
     
         </div>
         <div class="detailed-description col-6">
-            <p>We believe that geting relevant, accurate information
+            <p class="effect-r ">We believe that geting relevant, accurate information
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet sint
                 laudantium iusto sunt non pariatur autem doloremque consectetur.
                 Consequatur porro mollitia labore laborum dolor quaerat maiores consequuntur eum ipsam odit?
@@ -131,14 +131,14 @@
 
     </section>
 
-    <section class="card-container s-effect">
+    <section class="card-container">
 
         <h2 class="section-title">Most viewed Articles</h2>
         <div class="post post-container ">
 
             <%Articles.forEach(function(article){ %>
 
-            <div class="post-box">
+            <div class="post-box s-effect">
 
                 <h2 class="post-title"><%= article.title%></h2>
                 <span class="post-date"><%= article.datePublished.substring(4,15)%></span>
@@ -164,22 +164,22 @@
     <section id="FAQ">
         <div class="container s-effect">
             <h1>FAQ'S</h1>
-            <div class="faq row">
+            <div class="faq effect-l row">
                 <h3 class="col-11">What is your return policy?</h3>
                 <img class="col-1" src="/images/arrow.svg" alt="">
                 <p>We accept returns within 30 days of delivery if the item is unused and in its original packaging.</p>
             </div>
-            <div class="faq row">
+            <div class="faq effect-r row">
                 <h3 class="col-11">What is your return policy?</h3>
                 <img class="col-1" src="/images/arrow.svg" alt="">
                 <p>We accept returns within 30 days of delivery if the item is unused and in its original packaging.</p>
             </div>
-            <div class="faq row">
+            <div class="faq effect-l row">
                 <h3 class="col-11">What is your return policy?</h3>
                 <img class="col-1" src="/images/arrow.svg" alt="">
                 <p>We accept returns within 30 days of delivery if the item is unused and in its original packaging.</p>
             </div>
-            <div class="faq row">
+            <div class="faq effect-r row">
                 <h3 class="col-11">What is your return policy?</h3>
                 <img class="col-1" src="/images/arrow.svg" alt="">
                 <p>We accept returns within 30 days of delivery if the item is unused and in its original packaging.</p>
@@ -197,10 +197,10 @@
             <footer class="py-5">
                 <div class="row">
                     <div class="col-3 col-md-2 mb-3">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a>
+                        <h5 class="footer-heading">Section</h5>
+                        <ul class="nav flex-column ">
+                            <li class="nav-item "><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                            <li class="nav-item "><a href="#" class="nav-link p-0 text-body-secondary">Features</a>
                             </li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
                             </li>
@@ -213,19 +213,19 @@
 
 
                     <div class="col-6 justify-content-center">
-                        <h5>contact us</h5>
-                        <ul class="list-unstyled d-flex py-3">
-                            <i class="fa-brands fa-linkedin px-2 fa-2xl" style="color: #035839;"></i>
-                            <i class="fa-brands fa-telegram px-2 fa-2xl" style="color: #035839;"></i>
-                            <i class="fa-brands fa-facebook px-2 fa-2xl" style="color: #035839;"></i>
-                            <i class="fa-solid fa-envelope px-2 fa-2xl" style="color: #035839;"></i>
+                        <h5 class="footer-heading">Contact Us</h5>
+                        <ul class="list-unstyled  py-3 text-center ">
+                            <i class="fa-brands fa-linkedin px-2 fa-2xl mb-3" style="color: #2E5895;"></i>
+                            <i class="fa-brands fa-telegram px-2 fa-2xl mb-3" style="color: #2E5895;"></i>
+                            <i class="fa-brands fa-facebook px-2 fa-2xl mb-3" style="color: #2E5895;"></i>
+                            <i class="fa-solid fa-envelope px-2 fa-2xl mb-3" style="color:  #2E5895;"></i>
 
                         </ul>
                     </div>
 
                     <div class="col-md-3 offset-md-1 mb-3">
                         <form>
-                            <h5 class="newsletter-heading">Subscribe to our newsletter</h5>
+                            <h5 class="footer-heading">Subscribe to our newsletter</h5>
                             <p>Monthly digest of what's new and exciting from us.</p>
                             <div class="flex-sm-row w-100 gap-2">
 

@@ -37,7 +37,7 @@ html{
 }
 .nav-links{
  color: rgb(255, 255, 255);
- padding: 30px;
+ padding: 0 30px;
  font-weight: 400;
  text-decoration: none;
 }
@@ -50,7 +50,7 @@ background-color: #035839;
  text-align: center;
  opacity: 0;
  width:120px;
- height:70%;
+ height:70px;
  color: #f2f2f2;
  margin-bottom: 10px;
  border-radius: 20px;
@@ -83,6 +83,7 @@ font-weight: 600;
   background-color:  #FFFFFF;
   width: 100%;
   height: 80vh;
+  margin-bottom: 10px;
   
 }
 .hero-container{
@@ -170,18 +171,44 @@ margin-top: 90px !important;
 .description{
   height: 100vh;
   background-color: #090F1F;
+  
 
 }
 .breif-description {
   background-color: #0042f8;
+  overflow: hidden;
 }
 .detailed-description{
   background-color: #1f0918;
+  overflow: hidden;
 
 }
+.effect-l{
+  transform: translatex(100%);
+  opacity: 0;
+  transition: transform 1.5s ease,
+              opacity .5s ease-out;
+}
+.effect-l.shown {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.effect-r{
+  transform: translatex(-100%);
+  opacity: 0;
+  transition: transform 1.5s ease,
+              opacity .5s ease-out;
+}
+.effect-r.shown {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+
 /* cards style */
 .section-title{
-  color: #2E5895;
+  color: #282A35;
   text-align: center;
 }
 .card-container {
@@ -309,6 +336,7 @@ img {
 .faq p {
   margin-top: 10px;
   display: none;
+  transition: 6s;
 }
 .faq img {
   width: 50px;
@@ -324,8 +352,11 @@ img {
 footer{
   background-color: #D9EEE1;
 }
-.newsletter-heading{
-  color:#090F1F;
+.footer-heading{
+  color:#282A35;
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
 }
 .Email-input{
   border-radius: 10px;
