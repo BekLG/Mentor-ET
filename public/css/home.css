@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #FFFFFF!important;
+  overflow-x: hidden;
 }
 html{
    scroll-behavior: smooth;
@@ -40,9 +41,14 @@ html{
  padding: 0 30px;
  font-weight: 400;
  text-decoration: none;
+ border-bottom: 0px transparent solid;
+ border-bottom-width: 0%;
+ transition: .2s linear;
 }
 .nav-links:hover{
-background-color: #035839;
+
+border-bottom: 1px #F69321 solid;
+border-bottom-width: 0%;
 }
 .BeMentor-btn{
  background-color: #F69321;
@@ -170,18 +176,33 @@ margin-top: 90px !important;
 /* description section  */
 .description{
   height: 100vh;
-  background-color: #090F1F;
+  color: #282A35;
   
 
 }
 .breif-description {
-  background-color: #0042f8;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.detailed-description{
-  background-color: #1f0918;
-  overflow: hidden;
 
+.breif-description p {
+  font-size: 25px;
+  width: 70%;
+}
+
+.detailed-description{
+  overflow: hidden;
+  width: 80%;
+
+}
+.detailed-description p:first-child{
+  margin-top: 25%;
+ 
+}
+.detailed-description p{
+  text-align: right;
 }
 .effect-l{
   transform: translatex(100%);
