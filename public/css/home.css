@@ -404,3 +404,10 @@ footer{
   border: #F69321 1px solid;
 
 }
+@media  (max-width:412px) {
+  .navBar {
+   
+    width: 100%;
+  }
+  
+}
