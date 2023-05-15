@@ -85,28 +85,24 @@ font-weight: 600;
  color: #f2f2f2;
 }
 .main-banner {
- 
-  background-color:  #FFFFFF;
+ background-color:  #FFFFFF;
   width: 100%;
-  height: 80vh;
+  height: 100%;
   margin-bottom: 10px;
   
 }
 .hero-container{
   padding: 2em;
-  height: 100%;
   background-color: #00000000;
   opacity: 0;
   animation: slide2 1s linear forwards;
  animation-delay: .8s;
 }
 .hero-description{
-margin-top: 90px !important;
+margin: 90px 0 !important;
 }
-.hero-image{
-  background: url(/images/mentor1.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
+.hero-image img{
+  margin-bottom: 40px;
 }
 .wrapper{
   display: flex;
@@ -176,7 +172,6 @@ margin-top: 90px !important;
 }
 /* description section  */
 .description{
-  height: 100vh;
   color: #282A35;
   
 
@@ -186,7 +181,6 @@ margin-top: 90px !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Oswald', sans-serif;
 }
 
 .breif-description p {
@@ -196,16 +190,16 @@ margin-top: 90px !important;
 }
 
 .detailed-description{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   width: 80%;
-
-}
-.detailed-description p:first-child{
-  margin-top: 25%;
- 
 }
 .detailed-description p{
-  text-align: right;
+  font-size: 1.1rem;
+  font-family: 'Oswald', sans-serif;
+  padding: 2rem;
 }
 .effect-l{
   transform: translatex(100%);
@@ -236,7 +230,6 @@ margin-top: 90px !important;
   text-align: center;
 }
 .card-container {
-  height: 100vh;
  padding-top: 3rem;
  background-image: url(/images/1.svg);
  background-repeat: no-repeat;
@@ -248,7 +241,7 @@ background-color: #D9EEE1;
   width: 80%;
   padding:2rem;
   
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 img {
