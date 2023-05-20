@@ -64,6 +64,14 @@ border-bottom-width: 0%;
  animation: slide2 1s linear forwards;
  animation-delay: .8s;
 }
+.nav-btn
+{ 
+  width:auto;
+  height:40px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  margin-left: 1rem;
+}
 @keyframes slide2 {
   0% {
       opacity: 0;
