@@ -53,6 +53,7 @@ border-bottom-width: 0%;
 .BeMentor-btn{
  background-color: #F69321;
  border: none;
+ white-space:nowrap;
  text-align: center;
  opacity: 0;
  width:120px;
