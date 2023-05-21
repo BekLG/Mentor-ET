@@ -54,9 +54,10 @@ border-bottom-width: 0%;
  background-color: #F69321;
  border: none;
  white-space:nowrap;
+ padding: 10px;
  text-align: center;
  opacity: 0;
- width:120px;
+ /* width:120px; */
  height:70px;
  color: #f2f2f2;
  margin-bottom: 10px;
