@@ -121,7 +121,7 @@ margin: 90px 0 !important;
   list-style: none;
   color: #2E5895;
   margin-left: 0 !important;
-  font-size: 3em;
+  font-size: 300%;
   font-weight: 500;
   top: 0;
   position: relative;
@@ -389,8 +389,9 @@ footer{
 .Email-input{
   border-radius: 10px;
   border: #D9EEE1 .5px solid;
+  box-shadow: 0px 8px 15px hsla(357, 25%, 15%, 0.349);
   width: 100%;
-  background-color: #867d7d;
+  background-color: #ffffff;
   height: 40px;
   outline: none;
 }
