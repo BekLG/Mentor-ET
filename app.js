@@ -24,7 +24,11 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/mentorET", {useNewUrlParser: true})
+const dbUsername= process.env.DB_USERNAME;
+const dbPassword= process.env.DB_PASSWORD;
+
+mongoose.connect("mongodb+srv://" + dbUsername + ":" + dbPassword + "@cluster1.8xjo7em.mongodb.net/mentorET", {useNewUrlParser: true});
+
 
 const mentorSchema= new mongoose.Schema({
     firstName: String,
