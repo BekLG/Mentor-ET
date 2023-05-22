@@ -122,7 +122,6 @@ app.post("/login", function(req,res){
         }
         else{
             passport.authenticate("local")(req, res, function(){
-                console.log("welcome "+ req.user.username );
                 req.session.isLoggedIn = true;
 
 
