@@ -323,7 +323,6 @@ app.post("/subscribeEmail", function(req,res){
         email:req.body.emailAdress
     })
     email.save();
-    console.log("email saved");
     res.redirect("/");
 })
 
