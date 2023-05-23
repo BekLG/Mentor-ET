@@ -267,7 +267,6 @@ app.get("/articles/read/:articleId", function(req,res){     //a route for read m
     Article.find({_id: articleId})
     .then((foundArticle)=>{ 
         res.render("readMore",{article: foundArticle}); 
-        console.log(foundArticle[0].title);
     })
     .catch((err)=>{
         console.log(err);
