@@ -301,7 +301,6 @@ app.post("/admin/approvePost", function(req,res){
         approved:true
      })
      .then(()=>{
-        console.log("Article approved successfully");
         res.redirect("/admin");
      })
      .catch((err)=>{
