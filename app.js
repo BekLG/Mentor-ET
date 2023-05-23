@@ -189,7 +189,6 @@ app.post("/completeProfile", function(req,res){
         profileCompleted: true
      })
      .then(()=>{
-        console.log(req.user.username + " has completed your profile successfully");
         res.redirect("/");
      })
      .catch((err)=>{
