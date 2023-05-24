@@ -325,11 +325,6 @@ img {
 .profile-name{
    color: #090F1F;
 }
-/*something section */
-/* #Something{
-
-  
-} */
 .s-effect {
   transform: translateY(70px);
   opacity: 0;
@@ -399,8 +394,9 @@ footer{
 .Email-input:focus {
   border: #1f201f .5px solid;
 }
-.newsletter{
-  width: 80%;
+.newsletter form{
+   width: 80%;
+   margin:  auto ;
 }
 .subscribe-btn{
   margin: 20px 0px 30px;
