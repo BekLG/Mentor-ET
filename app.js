@@ -203,7 +203,7 @@ app.get("/composeArticle", function (req, res) {
 
     Field.find({})  //fetch all fields
         .then((foundField) => {
-            res.render("composeArticle", { Fields: foundField });
+            res.render("composeArticle", { Fields: foundField, isLoggedIn: req.session.isLoggedIn });
         })
         .catch((err) => {
             console.log(err);
