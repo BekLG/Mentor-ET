@@ -35,11 +35,10 @@
     margin-top: 50px;
    
 }
-.status {
-  /* background-color: black; */
-}
+
 form{
     margin:40px;
+
 }
 .buttons{
     display: flex;
@@ -73,6 +72,7 @@ input {
   border-radius: 4px;
   width: 75%;
   height:40px;
+  margin: 10px;
 }
 /* field lists */
 .list-container{
