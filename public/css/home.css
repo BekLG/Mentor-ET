@@ -391,12 +391,16 @@ footer{
   border: #D9EEE1 .5px solid;
   box-shadow: 0px 8px 15px hsla(357, 25%, 15%, 0.349);
   width: 100%;
+  color: #000;
   background-color: #ffffff;
   height: 40px;
   outline: none;
 }
 .Email-input:focus {
   border: #1f201f .5px solid;
+}
+.newsletter{
+  width: 80%;
 }
 .subscribe-btn{
   margin: 20px 0px 30px;
