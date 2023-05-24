@@ -21,78 +21,79 @@
 <body>
 
 
-    <nav class="navBar navbar navbar-expand-lg sticky-top" style="background-color: #000;">
-
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">MentorET</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel" style="background-color: #2E5895;">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end  flex-grow-1 pe-3">
-                        <li class="nav-items ">
-                            <a class="nav-links active" aria-current="page" href="/">Home</a>
-                        </li>
-
-                        <li class="nav-items dropdown">
-                            <a class="nav-links dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Field
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <% Fields.forEach((field)=>{%>
-                                <li><a class="dropdown-item" href="/articles/<%= field.name%>"><%= field.name%></a></li>
-                                <% }) %>
-                            </ul>
-                        </li>
-                        <li class="nav-items">
-                            <a class="nav-links active" aria-current="page" href="/articles">Articles</a>
-                        </li>
-                        <li class="nav-items">
-                            <a class="nav-links active" aria-current="page" href="#">About</a>
-                        </li>
-
-                        <% if(isLoggedIn){ %>
-
-                        <li class="nav-items">
-                            <a class="nav-links active" aria-current="page" href="#">My Profile</a>
-
-                        </li>
-                        <li class="nav-items">
-                            <a class="nav-links active" aria-current="page" href="/logout">Log Out</a>
-                        </li>
-                        <li class="nav-items">
-                            <button class="BeMentor-btn composeBtn" type="submit"><a href="/composeArticle">compose
-                                    article</a></button>
-                        </li>
-
-                        <% } else {%>
-
-                        <li class="nav-items">
-                            <button class="BeMentor-btn" type="submit"><a href="/signInUp">Be a Mentor</a></button>
-                        </li>
-
-                        <% } %>
-
-
-
-
-                    </ul>
-                </div>
-            </div>
-    </nav>
+   
 
 
     <section class="main-banner">
+        <nav class="navBar navbar navbar-expand-lg sticky-top" style="background-color: #000;">
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">MentorET</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel" style="background-color: #2E5895;">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end  flex-grow-1 pe-3">
+                            <li class="nav-items ">
+                                <a class="nav-links active" aria-current="page" href="/">Home</a>
+                            </li>
+    
+                            <li class="nav-items dropdown">
+                                <a class="nav-links dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Field
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <% Fields.forEach((field)=>{%>
+                                    <li><a class="dropdown-item" href="/articles/<%= field.name%>"><%= field.name%></a></li>
+                                    <% }) %>
+                                </ul>
+                            </li>
+                            <li class="nav-items">
+                                <a class="nav-links active" aria-current="page" href="/articles">Articles</a>
+                            </li>
+                            <li class="nav-items">
+                                <a class="nav-links active" aria-current="page" href="#">About</a>
+                            </li>
+    
+                            <% if(isLoggedIn){ %>
+    
+                            <li class="nav-items">
+                                <a class="nav-links active" aria-current="page" href="#">My Profile</a>
+    
+                            </li>
+                            <li class="nav-items">
+                                <a class="nav-links active" aria-current="page" href="/logout">Log Out</a>
+                            </li>
+                            <li class="nav-items">
+                                <button class="BeMentor-btn composeBtn" type="submit"><a href="/composeArticle">compose
+                                        article</a></button>
+                            </li>
+    
+                            <% } else {%>
+    
+                            <li class="nav-items">
+                                <button class="BeMentor-btn" type="submit"><a href="/signInUp">Be a Mentor</a></button>
+                            </li>
+    
+                            <% } %>
+    
+    
+    
+    
+                        </ul>
+                    </div>
+                </div>
+        </nav>
         <div class="hero-container row">
             <div class="hero-description col-lg-7 col-sm-12">
                 <h6 class="hero-join hero-stst">Join Our Community Today</h6>

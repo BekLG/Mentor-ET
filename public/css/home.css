@@ -410,8 +410,31 @@ footer{
 }
 @media  (max-width:412px) {
   .navBar {
-   
+    padding: 0PX;
+    margin-bottom: 0px;
     width: 100%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    /* border-top-radius: none; */
   }
+  
+}
+@media (max-width:680px) {
+  .hero-container{
+    margin-top: 0px !important;
+    padding: 2em;
+  }
+
+.wrapper .dynamic-texts li{
+ 
+  font-size: 150%;
+  
+
+}
+.hero-stst{
+  margin-left:0px;
+  text-align: center;
+}
+
   
 }
