@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/mentor.css">
+  <title>Mentor sign-in-form</title>
+</head>
+
+<body>
+  <div class="carousel-container">
+    <h3>Please Login To Continue</h3>
+    <div class=" carousel-indicator">
+      
+      <button type="button" class="active-btn indicator-button " data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active">Login</button>
+      <button type="button" class="indicator-button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1">Sign Up</button>
+
+    </div>
+    <br>
+    <div id="carouselExampleDark" class="carousel slide">
+
+      <div class="carousel-inner">
+        
+        <div class="carousel-item active" data-bs-interval="10000">
+
+          <div class="container">
+            <form action="/login" method="post">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" id="username" class="form-control" name="username" required>
+              <label for="password" class="form-label" >Password</label>
+              <input type="password" id="password" class="form-control" name="password" required>
+
+              <p>Incorrect password or username</p>
+              
+              <button type="submit"> <strong>Login</strong></button>
+
+            </form>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="container">
+            <form action="/register" method="post" id="sign-in-form">
+              <label for="username" class="form-label">Email</label>
+              <input type="email" id="username" class="form-control" name="username" required>
+              <label for="password" class=" form-label">Password</label>
+              <input type="password" id="password" class="password form-control" name="password" required>
+              <label for="password" class="form-label">comfrim password</label>
+              <input type="password" id="comfrim-password" class=" comfrim-password form-control" name="comfrim-password" required>
+              <p id="message"></p>
+              <button type="submit" class="SignUp"><strong>Sign Up</strong></button>
+            </form>
+          </div>
+        </div>
+ </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+  </script>
+  <script src="/js/mentor.js"></script>
+</body>
+
+</html>
