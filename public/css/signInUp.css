@@ -37,6 +37,9 @@ h3{
   padding: 10px;
 
 }
+#ErrorMessage{
+  color: red;
+}
 #message{
   margin: 10px;
 }
