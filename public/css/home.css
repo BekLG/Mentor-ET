@@ -18,6 +18,8 @@ html{
   animation: slide1 1s linear forwards;
 }
 
+
+
 /* nav bar slide  */
 
 @keyframes slide1 {
@@ -423,6 +425,9 @@ footer{
   .hero-container{
     margin-top: 0px !important;
     padding: 2em;
+  }
+  .static-text{
+    margin: auto;
   }
 
 .wrapper .dynamic-texts li{

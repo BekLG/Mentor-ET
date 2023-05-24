@@ -48,3 +48,5 @@ window.addEventListener('scroll', function() {
 checkScrollArea(sections, 'shown');
 checkScrollArea(leftParagraphs, 'shown');
 checkScrollArea(rightParagraphs, 'shown');
+
+
