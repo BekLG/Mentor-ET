@@ -267,7 +267,7 @@ app.get("/articles/read/:articleId", function (req, res) {     //a route for rea
     const articleId = req.params.articleId;
     Article.find({ _id: articleId })
         .then((foundArticle) => {
-            res.render("readMore", { article: foundArticle });
+            res.render("readMore", { article: foundArticle, isLoggedIn: req.session.isLoggedIn });
         })
         .catch((err) => {
             console.log(err);
