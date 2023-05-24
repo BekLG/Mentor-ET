@@ -108,41 +108,95 @@ app.get("/signInUp", function (req, res) {
 
     // from the sign in and up page there will be two possible post requests /login and /register
 })
+
+// app.post("/login", function (req, res) {
+//     // handle login process here
+//     const mentor = new Mentor({
+//         username: req.body.username,
+//         password: req.body.password
+//     });
+
+//     if (!mentor) {
+//         // Incorrect password message
+//         console.log("unauthorized user");
+//         // return res.render('login', { message: 'Incorrect password' });
+//       }
+
+//     req.login(mentor, function (err) {
+//         if (err) {
+//             console.log(err);
+//         }
+//         else {
+//             passport.authenticate("local")(req, res, function () {
+//                 req.session.isLoggedIn = true;
+
+//                 // check if the users profile is completed, if not completed redirect user to complete profile page. if completed redirect user to home page
+
+//                 Mentor.findOne({ _id: req.user._id })
+//                     .then((foundMentor) => {
+//                         if (foundMentor.profileCompleted === false) {
+//                             res.redirect("/completeProfile");
+//                         }
+//                         else {
+//                             res.redirect("/")
+//                         }
+//                     })
+//                     .catch((err) => {
+//                         console.log(err);
+//                     })
+//             })
+//         }
+//     })
+// })
+
+
 app.post("/login", function (req, res) {
-    // handle login process here
     const mentor = new Mentor({
-        username: req.body.username,
-        password: req.body.password
+      username: req.body.username,
+      password: req.body.password
     });
+  
+    // // check if the mentor object exists before the authentication process
+    // if (!mentor) {
+    //   // Incorrect password message
+    //   console.log("eroor");
+    //   return res.render('login', { message: 'Incorrect password' });
+      
+    // }
 
+    if (!mentor) 
+    {
+         return res.redirect('/admin'); 
+        
+    }
+
+    console.log(res.status);
+    console.log(res.statusCode);
+  
     req.login(mentor, function (err) {
-        if (err) {
-            console.log(err);
-        }
-        else {
-            passport.authenticate("local")(req, res, function () {
-                req.session.isLoggedIn = true;
-
-
-                // check if the users profile is completed, if not completed redirect user to complete profile page. if completed redirect user to home page
-
-                Mentor.findOne({ _id: req.user._id })
-                    .then((foundMentor) => {
-                        if (foundMentor.profileCompleted === false) {
-                            console.log("please complete your profile");
-                            res.redirect("/completeProfile");
-                        }
-                        else {
-                            res.redirect("/")
-                        }
-                    })
-                    .catch((err) => {
-                        console.log(err);
-                    })
+      if (err) {
+        console.log(err);
+      } else {
+        passport.authenticate('local', { failureRedirect: '/signInUp', failureMessage: true })(req, res, function () {
+          req.session.isLoggedIn = true;
+  
+          // continue with the rest of the code
+          Mentor.findOne({ _id: req.user._id })
+            .then((foundMentor) => {
+              if (foundMentor.profileCompleted === false) {
+                res.redirect("/completeProfile");
+              } else {
+                res.redirect("/");
+              }
             })
-        }
-    })
-})
+            .catch((err) => {
+              console.log(err);
+            });
+        });
+      }
+    });
+  });
+  
 
 app.get("/logout", function (req, res) {
     req.logout(function (err) {
