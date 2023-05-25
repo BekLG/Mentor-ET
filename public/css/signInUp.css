@@ -1,9 +1,8 @@
 body {
   font-family: Arial, sans-serif;
-  background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  padding: 30px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 .carousel-container {
   margin: 50px auto;
