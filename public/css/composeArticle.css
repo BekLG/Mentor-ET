@@ -3,6 +3,7 @@ body{
   background-image: url(/images/blob-scatter-haikei.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: fixed;
   
 }
 h1{
@@ -22,7 +23,7 @@ h1{
   border: 1px solid rgba( 255, 255, 255, 0.18 );
   padding: 20px;
   width: 100%;
-  margin: auto auto;
+  margin: 5% auto;
 }
 textarea {
  width: 100%;
@@ -56,12 +57,12 @@ input[type="text"]{
   text-align: center;
   text-decoration: none;
   display: flex;
+  position: absolute;
   font-size: 16px;
   cursor: pointer;
   border-radius: 8px;
-  position: fixed;
   bottom: 10px;
-  left:10%
+  left:40%
 }
 .composeBtn:hover{
   background-color: #09570b;
