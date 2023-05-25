@@ -1,0 +1,127 @@
+.navBar {
+    background-color: #2E5895 !important;
+    box-shadow: 0px 4px 15px hsla(357, 25%, 15%, 0.514);
+    height: 6rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    width: 80%;
+    animation: slide1 1s linear forwards;
+  }
+
+
+/* nav bar slide  */
+
+@keyframes slide1 {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+  }
+  
+  
+  .nav-items {
+   display: flex;
+   align-items: center;
+  
+  }
+  .nav-links{
+   color: rgb(255, 255, 255);
+   padding: 0 30px;
+   font-weight: 400;
+   text-decoration: none;
+   border-bottom: 0px transparent solid;
+   border-bottom-width: 0%;
+   transition: .2s linear;
+  }
+  .nav-links:hover{
+  
+  border-bottom: 1px #F69321 solid;
+  border-bottom-width: 0%;
+  }
+  .BeMentor-btn{
+   background-color: #F69321;
+   border: none;
+   white-space:nowrap;
+   padding: 10px;
+   text-align: center;
+   opacity: 0;
+   /* width:120px; */
+   height:70px;
+   color: #f2f2f2;
+   margin-bottom: 10px;
+   border-radius: 20px;
+   font-size: 16px;
+   animation: slide2 1s linear forwards;
+   animation-delay: .8s;
+  }
+  .nav-btn
+  { 
+    width:auto;
+    height:40px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    margin-left: 1rem;
+  }
+  .BeMentor-btn a{
+    text-decoration: none; 
+    color:#D9EEE1;
+    font-weight: 600;
+    }
+    .BeMentor-btn:hover{
+     background-color: #fd8700;
+     box-shadow: 0px 4px 15px hsl(355deg 25% 15% / 10%);
+    
+     color: #f2f2f2;
+    }
+
+    * style for footer */
+footer{
+  background-color: #D9EEE1;
+}
+.footer-heading{
+  color:#282A35;
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+}
+.Email-input{
+  border-radius: 10px;
+  border: #D9EEE1 .5px solid;
+  box-shadow: 0px 8px 15px hsla(357, 25%, 15%, 0.349);
+  width: 100%;
+  color: #000;
+  background-color: #ffffff;
+  height: 40px;
+  outline: none;
+}
+.Email-input:focus {
+  border: #1f201f .5px solid;
+}
+.newsletter form{
+   width: 80%;
+   margin:  auto ;
+}
+.subscribe-btn{
+  margin: 20px 0px 30px;
+  background-color: #F69321;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px hsla(357, 25%, 15%, 0.349);
+  border: #F69321 1px solid;
+
+}
+@media  (max-width:412px) {
+    .navBar {
+      padding: 0PX;
+      margin-bottom: 0px;
+      width: 100%;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      /* border-top-radius: none; */
+    }
+    
+  }
