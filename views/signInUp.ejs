@@ -38,17 +38,6 @@
                         <a class="nav-links active" aria-current="page" href="/">Home</a>
                     </li>
 
-                    <li class="nav-items dropdown">
-                        <a class="nav-links dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Field
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                            <% Fields.forEach((field)=>{%>
-                            <li><a class="dropdown-item" href="/articles/<%= field.name%>"><%= field.name%></a></li>
-                            <% }) %>
-                        </ul>
-                    </li>
                     <li class="nav-items">
                         <a class="nav-links active" aria-current="page" href="/articles">Articles</a>
                     </li>
