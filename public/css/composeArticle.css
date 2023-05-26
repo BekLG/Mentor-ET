@@ -50,22 +50,23 @@ input[type="text"]{
   border: #25218D 1px solid;
 }
 .ArticleComposeBtn{
-  background-color: #1f8522;
+  background-color: #FD8700;
   border: none;
   color: white;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
-  display: flex;
-  position: absolute;
   font-size: 16px;
   cursor: pointer;
   border-radius: 8px;
-  bottom: 10px;
-  left:40%
+  position: relative;
+  left:50%;
+  top: 10px;
+  transform: translateX(-50%);
+
 }
 .ArticleComposeBtn:hover{
-  background-color: #09570b;
+  background-color: #db7909;
   bottom: 11px;
   box-shadow: #3333332d 1px 4px ;
 }
