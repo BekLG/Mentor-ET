@@ -49,7 +49,7 @@ input[type="text"]{
   border-radius: 10px;
   border: #25218D 1px solid;
 }
-.composeBtn{
+.ArticleComposeBtn{
   background-color: #1f8522;
   border: none;
   color: white;
@@ -64,7 +64,7 @@ input[type="text"]{
   bottom: 10px;
   left:40%
 }
-.composeBtn:hover{
+.ArticleComposeBtn:hover{
   background-color: #09570b;
   bottom: 11px;
   box-shadow: #3333332d 1px 4px ;
