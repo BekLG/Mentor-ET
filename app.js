@@ -107,12 +107,12 @@ app.get("/", function (req, res) {
 
 app.get("/signInUp", function (req, res) {
     // this page will send a page that contains both a signin and signup pages with their forms
-    res.render('signInUp');
+    res.render('signInUp', {isLoggedIn: req.session.isLoggedIn});
     // from the sign in and up page there will be two possible post requests /login and /register
 })
 app.get("/reSignInUp", function (req, res) {
     // this page will send a page that contains both a signin and signup pages with their forms
-    res.render('reSignInUp');
+    res.render('reSignInUp', {isLoggedIn: req.session.isLoggedIn});
     // from the sign in and up page there will be two possible post requests /login and /register
 })
 
