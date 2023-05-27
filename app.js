@@ -5,7 +5,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const lodash = require("lodash");
 const session = require("express-session");
-const flash = require('express-flash');
+// const flash = require('express-flash');
+const bcrypt= require("bcrypt");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const findOrCreate = require('mongoose-findorcreate');
@@ -22,7 +23,7 @@ app.use(session({
     saveUninitialized: false
 }));
 
-app.use(flash());
+// app.use(flash());
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -88,6 +89,14 @@ const emailSubscriberSchema = new mongoose.Schema({
 });
 
 const Email = new mongoose.model("email", emailSubscriberSchema);
+
+
+const adminSchema = new mongoose.Schema({
+    email: { type: String, unique: true },
+    password: String
+  });
+
+const Admin= new mongoose.model("Admins", adminSchema);
 
 app.get("/", function (req, res) {
 
