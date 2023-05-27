@@ -5,7 +5,7 @@
     margin: 2rem auto;
     border-radius: 10px;
     width: 80%;
-    animation: slide1 1s linear forwards;
+   
   }
 
 
@@ -47,15 +47,12 @@
    white-space:nowrap;
    padding: 8px 16px;
    text-align: center;
-   opacity: 0;
-   /* width:120px; */
    height:70px;
    color: #f2f2f2;
    margin-bottom: 10px;
    border-radius: 20px;
    font-size: 16px;
-   animation: slide2 1s linear forwards;
-   animation-delay: .8s;
+   
   }
   @keyframes slide2 {
     0% {

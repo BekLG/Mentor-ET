@@ -9,7 +9,14 @@ html{
    scroll-behavior: smooth;
 }
 
-
+nav{
+  animation: slide1 1s linear forwards;
+}
+.BeMentor-btn{
+  opacity: 0;
+  animation: slide2 1s linear forwards;
+  animation-delay: .8s;
+}
 
 
 .main-banner {
