@@ -112,11 +112,14 @@
   
             <p><%= article.content.substring(0,400)+"..."%></p>
             
-            <br>
-            <br>
-            <a class="btn btn-outline-primary rounded-pill" href="/articles/read/<%=article._id%>">Read More</a>
-            <br>
-            <br>
+            <button class="learn-more">
+              <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+              </span>
+              <span class="button-text"><a href="/articles/read/<%=article._id%>">
+                  Read More
+              </a></span>
+            </button>
             <div class="mentor-info container">
               <div class="row justify-content-between">
                 <div class="mentor-contact col-6">
