@@ -16,65 +16,16 @@ body {
   }
   /* mode toggle */
 .toggle-container {
-    position: fixed;
+    position: sticky;
     bottom: 20px;
-    right: 100px;
+    right: 900px;
   }
-  
-  /* .toggle-label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 34px;
-    border-radius: 13px;
-    background-color: #000000;
-  }
-  
-  .toggle-label:before {
-    position: absolute;
-    content: "";
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #fff;
-    top: 2px;
-    left: 2px;
-    transition: transform 0.2s ease-in-out;
-  }
-  .toggle-label::after{
-    position: absolute;
-    content: ".🌞";
-    top: 4px;
-    left: 2px;
-    transition: transform 0.2s ease-in-out;
-
-  }
-  
-  input[type="checkbox"] {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  input[type="checkbox"]:checked + .toggle-label {
-    background-color: #ffffff;
-  }
-  
-  input[type="checkbox"]:checked + .toggle-label:before {
-    transform: translateX(64px);
-    background-color: #000000;
-  }
-  input[type="checkbox"]:checked + .toggle-label:after {
-    transform: translateX(70px);
-    content: "🌙.";
-  } */
 
   .switch {
     font-size: 17px;
     position: relative;
     display: inline-block;
-    width: 64px;
+    width: 70px;
     height: 34px;
   }
   
@@ -91,7 +42,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #73C0FC;
+    background-color: #2E5895;
     transition: .4s;
     border-radius: 30px;
   }
@@ -145,7 +96,7 @@ body {
   
   /* .switch:hover */
   .moon svg {
-    animation: tilt 5s linear infinite;
+    animation: tilt 2s linear infinite;
   }
   
   @keyframes tilt {
@@ -176,7 +127,7 @@ body {
   }
   
   .input:checked + .slider:before {
-    transform: translateX(30px);
+    transform: translateX(36px);
   }
   
   @media (max-width:680px) {
