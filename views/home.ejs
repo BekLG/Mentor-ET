@@ -161,10 +161,17 @@
                 <span class="post-date"><%= article.datePublished.substring(4,15)%></span>
 
                 <p class="post-description"><%= article.content.substring(0,300)+"..."%></p>
-
-                <button class="read-more-button"> <a href="/articles/read/<%=article._id%>">
+                       
+                <button class="learn-more">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text"><a href="/articles/read/<%=article._id%>">
                         Read More
-                    </a></button>
+                    </a></span>
+                  </button>
+
+                <!-- <button class="read-more-button"> </button> -->
                 <div class=" profile">
                     <i class="fa-solid fa-circle-user px-2 fa-2xl"></i>
                     <span class="profile-name"><%= article.author%></span>
