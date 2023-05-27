@@ -23,7 +23,12 @@
         opacity: 100%;
     }
   }
+  .dropdown-menu{
+    background-color: #2E5895 !important;
+    box-shadow: 0px 4px 15px hsla(357, 25%, 15%, 0.514);
+    
 
+  }
   .nav-items {
    display: flex;
    align-items: center;
