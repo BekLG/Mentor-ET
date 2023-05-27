@@ -83,7 +83,8 @@ const fieldSchema = new mongoose.Schema({
 const Field = new mongoose.model("field", fieldSchema);
 
 const emailSubscriberSchema = new mongoose.Schema({
-    email: String
+    email: String,
+    comment: String
 });
 
 const Email = new mongoose.model("email", emailSubscriberSchema);
@@ -319,7 +320,8 @@ app.post("/admin/addField", function (req, res) {
 
 app.post("/subscribeEmail", function (req, res) {
     const email = new Email({
-        email: req.body.emailAdress
+        email: req.body.emailAdress,
+        comment: req.body.commnet
     })
     email.save();
     res.redirect("/");
