@@ -323,25 +323,6 @@ app.get("/articles/read/:articleId", function (req, res) {     //a route for rea
 
 })
 
-// app.get("/admin", function (req, res) {
-//     Article.find({ approved: false }) // filter articles that are not approved yet
-//         .then((foundArticle) => {
-
-//             Field.find({})  //fetch all fields
-//                 .then((foundField) => {
-//                     res.render("admin", { Articles: foundArticle, Fields: foundField });
-//                 })
-//                 .catch((err) => {
-//                     console.log(err);
-//                 })
-
-//         })
-//         .catch((err) => {
-//             console.log(err);
-//         })
-// })
-
-
 app.get("/admin", function(req,res){
 
     if(req.session.isLoggedIn === true)
@@ -412,6 +393,26 @@ app.get("/profile" ,function(req,res){
     res.render("comingSoon");
 })
 
-app.listen(3000, function (req, res) {
-    console.log("server is up and running on port 3000");
-})
+app.listen(process.env.PORT || 3000, function(req,res) {
+    console.log("Server started.");
+    Admin.find({email: process.env.EMAIL_1})
+    .then((foundAdmin)=>{
+        if(foundAdmin.length===0)
+        {
+            console.log("no admin found!");
+            const password= bcrypt.hashSync(process.env.PASSWORD_1,10);
+            const admin= new Admin({
+                email: process.env.EMAIL_1,
+                password: password,
+            })
+            admin.save();
+            console.log(password);
+        }
+        else{
+            console.log("admin found!");
+        }
+    })
+    .catch((err)=>{
+        console.log(err);
+    })           
+});
