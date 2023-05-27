@@ -132,7 +132,23 @@ app.post("/login", function (req, res) {
         username: req.body.username,
         password: req.body.password
     });
-
+    // app.get("/admin", function (req, res) {
+        //     Article.find({ approved: false }) // filter articles that are not approved yet
+        //         .then((foundArticle) => {
+        
+        //             Field.find({})  //fetch all fields
+        //                 .then((foundField) => {
+        //                     res.render("admin", { Articles: foundArticle, Fields: foundField });
+        //                 })
+        //                 .catch((err) => {
+        //                     console.log(err);
+        //                 })
+        
+        //         })
+        //         .catch((err) => {
+        //             console.log(err);
+        //         })
+        // })
     req.login(mentor, function (err) {
         if (err) {
             console.log(err);
@@ -283,10 +299,51 @@ app.get("/articles/read/:articleId", function (req, res) {     //a route for rea
             console.log(err);
         })
 
-})
+})app.get("/admin", function (req, res) {
+    //     Article.find({ approved: false }) // filter articles that are not approved yet
+    //         .then((foundArticle) => {
+    
+    //             Field.find({})  //fetch all fields
+    //                 .then((foundField) => {
+    //                     res.render("admin", { Articles: foundArticle, Fields: foundField });
+    //                 })
+    //                 .catch((err) => {
+    //                     console.log(err);
+    //                 })
+    
+    //         })
+    //         .catch((err) => {
+    //             console.log(err);
+    //         })
+    // })
 
-app.get("/admin", function (red, res) {
-    Article.find({ approved: false }) // filter articles that are not approved yet
+// app.get("/admin", function (req, res) {
+//     Article.find({ approved: false }) // filter articles that are not approved yet
+//         .then((foundArticle) => {
+
+//             Field.find({})  //fetch all fields
+//                 .then((foundField) => {
+//                     res.render("admin", { Articles: foundArticle, Fields: foundField });
+//                 })
+//                 .catch((err) => {
+//                     console.log(err);
+//                 })
+
+//         })
+//         .catch((err) => {
+//             console.log(err);
+//         })
+// })
+
+
+app.get("/admin", function(req,res){
+
+    if(req.session.isLoggedIn === true)
+    {
+        
+
+
+        Article.find({ approved: false }) // filter articles that are not approved yet
         .then((foundArticle) => {
 
             Field.find({})  //fetch all fields
@@ -297,12 +354,17 @@ app.get("/admin", function (red, res) {
                     console.log(err);
                 })
 
-
-
         })
         .catch((err) => {
             console.log(err);
         })
+
+
+    }
+    else
+    {
+        res.redirect("/adminLogin");
+    }
 })
 
 app.post("/admin/approvePost", function (req, res) {
