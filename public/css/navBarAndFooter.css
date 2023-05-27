@@ -7,6 +7,9 @@
     width: 80%;
    
   }
+  .navbar-brand{
+    color: white !important; 
+  }
 
 
 /* nav bar slide  */
