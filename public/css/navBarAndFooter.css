@@ -107,6 +107,7 @@ footer p{
   width: 100%;
   color: #000 !important;
   background-color: #ffffff;
+
   height: 40px;
   outline: none;
 }
@@ -117,6 +118,20 @@ footer p{
    width: 80%;
    margin:  auto ;
 }
+#comment{
+  border-radius: 10px;
+  border: #D9EEE1 .5px solid;
+  box-shadow: 0px 8px 15px hsla(357, 25%, 15%, 0.349);
+  width: 100%;
+  color: #000 !important;
+  margin: 20px 0px 0px;
+  background-color: #ffffff;
+  height: 80px;
+  outline: none;
+}
+#comment:focus{
+  border: #1f201f .5px solid;
+}
 .subscribe-btn{
   margin: 20px 0px 30px;
   background-color: #F69321;
@@ -126,6 +141,9 @@ footer p{
   box-shadow: 0px 8px 15px hsla(357, 25%, 15%, 0.349);
   border: #FD8700 1px solid;
 
+}
+.subscribe-btn:hover{
+  box-shadow: 0px 8px 15px hsla(357, 25%, 15%, 0.521);
 }
 @media  (max-width:412px) {
     .navBar {
