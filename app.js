@@ -132,23 +132,7 @@ app.post("/login", function (req, res) {
         username: req.body.username,
         password: req.body.password
     });
-    // app.get("/admin", function (req, res) {
-        //     Article.find({ approved: false }) // filter articles that are not approved yet
-        //         .then((foundArticle) => {
-        
-        //             Field.find({})  //fetch all fields
-        //                 .then((foundField) => {
-        //                     res.render("admin", { Articles: foundArticle, Fields: foundField });
-        //                 })
-        //                 .catch((err) => {
-        //                     console.log(err);
-        //                 })
-        
-        //         })
-        //         .catch((err) => {
-        //             console.log(err);
-        //         })
-        // })
+
     req.login(mentor, function (err) {
         if (err) {
             console.log(err);
@@ -175,6 +159,44 @@ app.post("/login", function (req, res) {
         }
     })
 })
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+app.get("/adminLogin",function(req,res){
+    res.render("adminLogin");
+})
+
+app.post("/adminLogin", function(req, res) {
+    const username = req.body.username;
+    const password = req.body.password;
+  
+    Admin.find({email: username})
+      .then((foundAdmin) => {
+        if (foundAdmin.length === 0) {
+          console.log("no admins found!");
+          res.redirect('/adminLogin');
+        } else {
+          const storedHashedPassword = foundAdmin[0].password;
+          bcrypt.compare(password, storedHashedPassword, (err, result) => {
+            if (err || !result) {
+              // Invalid login credentials, redirect to login page
+              console.log("password didnt match");
+              res.redirect('/adminLogin');
+            } else {
+              // Valid login credentials, set session variable to indicate that the user is logged in
+              req.session.isLoggedIn = true;
+              // Redirect to dashboard
+              res.redirect('/admin');
+            }
+          });
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
+////////////////////////////////////////////////////////////////////////////////////////
 
 app.get("/logout", function (req, res) {
     req.logout(function (err) {
@@ -299,23 +321,7 @@ app.get("/articles/read/:articleId", function (req, res) {     //a route for rea
             console.log(err);
         })
 
-})app.get("/admin", function (req, res) {
-    //     Article.find({ approved: false }) // filter articles that are not approved yet
-    //         .then((foundArticle) => {
-    
-    //             Field.find({})  //fetch all fields
-    //                 .then((foundField) => {
-    //                     res.render("admin", { Articles: foundArticle, Fields: foundField });
-    //                 })
-    //                 .catch((err) => {
-    //                     console.log(err);
-    //                 })
-    
-    //         })
-    //         .catch((err) => {
-    //             console.log(err);
-    //         })
-    // })
+})
 
 // app.get("/admin", function (req, res) {
 //     Article.find({ approved: false }) // filter articles that are not approved yet
