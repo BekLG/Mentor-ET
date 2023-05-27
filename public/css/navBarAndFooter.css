@@ -43,23 +43,24 @@
     color: #ffedd3;
     text-transform: uppercase;
     position: relative;
-    transition: .5s ease;
+    transition: .2s ease;
   }
   
   .nav-links::before {
     content: '';
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: 0;
     height: 2px;
     width: 0;
     background-color: #F69321;
     transition: .5s ease;
+    transform: translateX(-50%);
   }
   
   .nav-links:hover {
     color: #F69321;
-    transition-delay: .5s;
+    transition-delay: .2s;
   }
   
   .nav-links:hover::before {
