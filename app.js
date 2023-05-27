@@ -325,6 +325,13 @@ app.post("/subscribeEmail", function (req, res) {
     res.redirect("/");
 })
 
+app.get("/about" ,function(req,res){
+    res.render("comingSoon");
+})
+
+app.get("/profile" ,function(req,res){
+    res.render("comingSoon");
+})
 
 app.listen(3000, function (req, res) {
     console.log("server is up and running on port 3000");
