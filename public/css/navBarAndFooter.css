@@ -64,7 +64,7 @@
   }
   
   .nav-links:hover::before {
-    width: 100%;
+    width: 70%;
   }
 .BeMentor-btn{
    background-color: #F69321;
