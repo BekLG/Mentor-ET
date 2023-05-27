@@ -23,28 +23,44 @@
         opacity: 100%;
     }
   }
-  
-  
+
   .nav-items {
    display: flex;
    align-items: center;
   
   }
-  .nav-links{
-   color: rgb(255, 255, 255);
-   padding: 0 30px;
-   font-weight: 400;
-   text-decoration: none;
-   border-bottom: 0px transparent solid;
-   border-bottom-width: 0%;
-   transition: .2s linear;
+  .nav-links {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    color: #ffedd3;
+    text-transform: uppercase;
+    position: relative;
+    transition: .5s ease;
   }
-  .nav-links:hover{
   
-  border-bottom: 1px #F69321 solid;
-  border-bottom-width: 0%;
+  .nav-links::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #F69321;
+    transition: .5s ease;
   }
-  .BeMentor-btn{
+  
+  .nav-links:hover {
+    color: #F69321;
+    transition-delay: .5s;
+  }
+  
+  .nav-links:hover::before {
+    width: 100%;
+  }
+.BeMentor-btn{
    background-color: #F69321;
    border: none;
    white-space:nowrap;
