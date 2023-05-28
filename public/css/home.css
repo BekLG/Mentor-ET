@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #FFFFFF !important;
-  overflow-x: hidden !important;
+  
 }
 html{
    scroll-behavior: smooth;
@@ -348,6 +348,7 @@ button.learn-more {
    background-color: #96D4D4;
    color: #000;
    padding: 20px;
+   overflow-x: hidden !important;
 }
 .faq {
   
@@ -379,7 +380,7 @@ button.learn-more {
 .rotate {
    transform: rotate(180deg);
  }
-@media (max-width:680px) {
+@media (max-width:780px) {
   .hero-container{
     margin-top: 0px !important;
     padding: 2em;
