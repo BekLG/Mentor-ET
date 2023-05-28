@@ -227,7 +227,14 @@ app.post("/register", function (req, res) {
 
 app.get("/completeProfile", function (req, res) {
     // a route to ask the mentor to fill relevant informations about him....after signing up.
-    res.render("completeprofile");
+    Field.find({})  //fetch all fields
+                .then((foundField) => {
+                    res.render("completeprofile", { Fields: foundField });
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
+    
 })
 
 app.post("/completeProfile", function (req, res) {
