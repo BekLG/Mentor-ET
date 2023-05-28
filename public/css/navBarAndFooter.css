@@ -129,9 +129,6 @@ footer p{
   gap: 0.5em;
 
 }
-ul.list-unstyled.py-5.row {
-  overflow: hidden;
-}
 
 .up {
   display: flex;
