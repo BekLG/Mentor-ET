@@ -73,3 +73,8 @@ form button {
   background-color: #2E5895;
   border: none;
 }
+@media (max-width:525px) {
+  .carousel-container {
+    width: 90%;
+  }
+}
