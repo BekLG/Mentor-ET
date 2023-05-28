@@ -10,6 +10,7 @@ const bcrypt= require("bcrypt");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const findOrCreate = require('mongoose-findorcreate');
+const path = require("path");
 
 const app = express();
 

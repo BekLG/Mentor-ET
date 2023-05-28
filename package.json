@@ -11,7 +11,8 @@
     "mongoose": "^7.1.1",
     "mongoose-findorcreate": "^4.0.0",
     "passport": "^0.6.0",
-    "passport-local-mongoose": "^8.0.0"
+    "passport-local-mongoose": "^8.0.0",
+    "path": "^0.12.7"
   },
   "name": "mentor-et",
   "description": "a simple web project that connects university sudents with their mentors",
@@ -21,7 +22,6 @@
   "engines": {
     "node": "14.x"
   },
-
   "scripts": {
     "start": "node index.js"
   },
