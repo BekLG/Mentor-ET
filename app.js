@@ -140,6 +140,7 @@ app.post("/login", function (req, res) {
         else {
             passport.authenticate('local', { failureRedirect: '/reSignInUp', failureMessage: true })(req, res, function () {
                 req.session.isLoggedIn = true;
+                req.session.role = 'mentor';
 
                 // check if the users profile is completed, if not completed redirect user to complete profile page. if completed redirect user to home page
 
@@ -185,6 +186,7 @@ app.post("/adminLogin", function(req, res) {
             } else {
               // Valid login credentials, set session variable to indicate that the user is logged in
               req.session.isLoggedIn = true;
+              req.session.role = 'admin';
               // Redirect to dashboard
               res.redirect('/admin');
             }
@@ -325,10 +327,8 @@ app.get("/articles/read/:articleId", function (req, res) {     //a route for rea
 
 app.get("/admin", function(req,res){
 
-    if(req.session.isLoggedIn === true)
+    if(req.session.isLoggedIn === true && req.session.role==="admin")
     {
-        
-
 
         Article.find({ approved: false }) // filter articles that are not approved yet
         .then((foundArticle) => {
@@ -345,7 +345,6 @@ app.get("/admin", function(req,res){
         .catch((err) => {
             console.log(err);
         })
-
 
     }
     else
